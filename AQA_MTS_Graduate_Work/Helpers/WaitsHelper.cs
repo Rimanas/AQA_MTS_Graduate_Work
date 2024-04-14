@@ -1,4 +1,7 @@
-﻿using System.Collections.ObjectModel;
+﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
+using SeleniumExtras.WaitHelpers;
+using System.Collections.ObjectModel;
 
 namespace AQA_MTS_Graduate_Work.Helpers;
 public class WaitsHelper(IWebDriver driver, TimeSpan timeout)

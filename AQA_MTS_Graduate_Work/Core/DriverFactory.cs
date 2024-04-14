@@ -1,4 +1,9 @@
-﻿using System.Reflection;
+﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Firefox;
+using System.Reflection;
+using WebDriverManager;
+using WebDriverManager.DriverConfigs.Impl;
 
 namespace AQA_MTS_Graduate_Work.Core;
 public class DriverFactory

@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using AQA_MTS_Graduate_Work.Helpers.Configuration;
+using OpenQA.Selenium;
 
 namespace AQA_MTS_Graduate_Work.Core;
 public class Browser

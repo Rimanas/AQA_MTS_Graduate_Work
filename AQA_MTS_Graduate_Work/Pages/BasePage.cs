@@ -1,5 +1,6 @@
 ﻿using AQA_MTS_Graduate_Work.Helpers.Configuration;
 using AQA_MTS_Graduate_Work.Helpers;
+using OpenQA.Selenium;
 
 namespace AQA_MTS_Graduate_Work.Pages;
 public abstract class BasePage
