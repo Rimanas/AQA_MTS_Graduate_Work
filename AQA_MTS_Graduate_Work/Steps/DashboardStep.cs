@@ -19,4 +19,3 @@ namespace AQA_MTS_Graduate_Work.Steps;
         actions.MoveToElement(_dashboardPage.DownloadButton).Perform();
     }
 }
-

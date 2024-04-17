@@ -7,22 +7,20 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace AQA_MTS_Graduate_Work.Pages.AddProjectPage;
-    internal class ProjectBasePage
+public class ProjectBasePage : BasePage
 {
-    
-    private static string END_POINT = "index.php?/admin/projects/add/1";
-
-    // Описание элементов
-    private static readonly By TitleLabelBy = By.ClassName("page_title");
-
-
     // Инициализация класса
- 
+    public ProjectBasePage(IWebDriver driver) : base(driver)
+    {
+    }
 
+    public override bool IsPageOpened()
+    {
+        throw new NotImplementedException();
+    }
 
-
-    // Атомарные Методы
-
-
+    protected override string GetEndpoint()
+    {
+        throw new NotImplementedException();
+    }
 }
-    

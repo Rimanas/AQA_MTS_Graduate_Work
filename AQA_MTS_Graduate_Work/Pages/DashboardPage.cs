@@ -17,7 +17,10 @@ public class DashboardPage : BasePage
     private static readonly By IconTwitterBy = By.CssSelector("[class='icon-header-twitter']");
     private static readonly By IconTwitterTextBy = By.CssSelector("[tooltip-text*='Twitter']");
     private static readonly By DownloadTextLabelBy = By.CssSelector("[tooltip-text='Download']");
-
+    private static readonly By NavigateBtnBy = By.CssSelector("[data-testid='navigationUser']");
+    private static readonly By NavigateBtnTextBy = By.CssSelector("[data-testid='navigationUser']");
+    private static readonly By AddProjectBtnBy = By.CssSelector("[class='sidebar-button']");
+    
     // Инициализация класса
     public DashboardPage(IWebDriver driver) : base(driver)
     {
@@ -38,7 +41,9 @@ public class DashboardPage : BasePage
     public IWebElement DownloadButton => WaitsHelper.WaitForExists(DownloadButtonBy);
     public IWebElement IconTwitter => WaitsHelper.WaitForExists(IconTwitterBy);
     public IWebElement IconTwitterText => WaitsHelper.WaitForExists(IconTwitterTextBy);
-
+    public IWebElement NavigateBtn => WaitsHelper.WaitForExists(NavigateBtnBy);
+    public IWebElement NavigateBtnText => WaitsHelper.WaitForExists(NavigateBtnTextBy);
+    public IWebElement AddProjectBtn => WaitsHelper.WaitForExists(AddProjectBtnBy);
     public IWebElement DownloadTextLabel => WaitsHelper.WaitForExists(DownloadTextLabelBy);
 
     //Комплексные
@@ -59,9 +64,25 @@ public class DashboardPage : BasePage
             .Build()
             .Perform();
     }
+
+    public void MouseHoverNavigate()
+    {
+        Actions actions = new Actions(Driver);
+        actions
+            .MoveToElement(NavigateBtn)
+            .Build()
+            .Perform();
+    }
+
+    public void ClickAddProjectBtn() => AddProjectBtn.Click();
     public string DownLoadText()
     {
         return DownloadTextLabel.Text;
     }
+    public string NavigateBtnTextMethod()
+    {
+        return NavigateBtnText.Text;
+    }
     public string GetDownloadTextLabel() => DownloadTextLabel.Text.Trim();
+    public string GetNavigateBtnText() => NavigateBtnText.Text.Trim();
 }
