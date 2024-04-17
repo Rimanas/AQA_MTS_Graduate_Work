@@ -5,8 +5,8 @@ using OpenQA.Selenium;
 namespace AQA_MTS_Graduate_Work.Pages;
 public abstract class BasePage
 {
-    protected IWebDriver Driver { get; private set; }
-    protected WaitsHelper WaitsHelper { get; private set; }
+    protected IWebDriver Driver { get; private set; }         // свойство - драйвер
+    protected WaitsHelper WaitsHelper { get; private set; }      // свойство - ожидание
 
     public BasePage(IWebDriver driver)
     {
@@ -14,7 +14,7 @@ public abstract class BasePage
         WaitsHelper = new WaitsHelper(Driver, TimeSpan.FromSeconds(Configurator.WaitsTimeout));
     }
 
-    public BasePage(IWebDriver driver, bool openPageByUrl)
+    public BasePage(IWebDriver driver, bool openPageByUrl)  // флаг -bool openPageByUrl
     {
         Driver = driver;
         WaitsHelper = new WaitsHelper(Driver, TimeSpan.FromSeconds(Configurator.WaitsTimeout));
@@ -25,8 +25,8 @@ public abstract class BasePage
         }
     }
 
-    protected abstract string GetEndpoint();
-    public abstract bool IsPageOpened();
+    protected abstract string GetEndpoint();  //  каждая страница долдна выполнить это
+    public abstract bool IsPageOpened();    // можно пончть открылась страница или нет
 
     protected void OpenPageByURL()
     {
