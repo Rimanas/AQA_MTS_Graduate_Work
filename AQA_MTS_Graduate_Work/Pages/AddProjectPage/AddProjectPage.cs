@@ -12,7 +12,7 @@ public class AddProjectPage : ProjectBasePage
 
     //Описание элементов
     private static readonly By TitleLabelBy = By.ClassName("page_title");
-    private static readonly By InputFieldNameBy = By.ClassName("name");
+    private static readonly By InputFieldNameBy = By.Id("name");
     private static readonly By AddButtonBy = By.CssSelector("#accept");
 
     // Инициализация класса

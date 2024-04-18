@@ -5,18 +5,16 @@ using OpenQA.Selenium;
 namespace AQA_MTS_Graduate_Work.Steps;
    public class ProjectSteps : BaseStep
 {
-    private AddProjectPage _addProjectPage;
-    private DashboardPage _dashboardPage;   
+    private AddProjectPage _addProjectPage; 
 
     public ProjectSteps(IWebDriver driver) : base(driver)
     {
         _addProjectPage = new AddProjectPage(Driver);
-        //_addProjectPage = new DashboardPage(Driver);
     }
     public ProjectsPage AddProject(string projectName)
     {
-        _dashboardPage.ClickAddProjectBtn();
         _addProjectPage.InputFieldName.SendKeys(projectName);
+        Thread.Sleep(4000);
         _addProjectPage.ClickAddButton();
 
         return new ProjectsPage(Driver);

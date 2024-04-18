@@ -12,7 +12,7 @@ namespace AQA_MTS_Graduate_Work.Pages.AddProjectPage;
 
     //Описание элементов
     private static readonly By TitleLabelBy = By.ClassName("page_title");
-    private static readonly By SuccessfullyAddProjectTextBy = By.CssSelector("[class='icon-header-twitter']");
+    private static readonly By SuccessfullyAddProjectTextBy = By.CssSelector("[class='message message-success']");
 
     // Инициализация класса
     public ProjectsPage(IWebDriver driver) : base(driver)

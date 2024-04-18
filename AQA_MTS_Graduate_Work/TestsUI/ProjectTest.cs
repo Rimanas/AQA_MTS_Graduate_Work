@@ -31,12 +31,17 @@ namespace AQA_MTS_Graduate_Work.TestsUI;
     public void AddProjectTest()
     {
         string expectedText = "Successfully added the new project.";
-        ProjectSteps projectSteps = new ProjectSteps(Driver);
+        //ProjectSteps projectSteps = new ProjectSteps(Driver);
         ProjectsPage projectsPage = new ProjectsPage(Driver);
+        AddProjectPage addProjectPage = new AddProjectPage(Driver);
         LoginSteps loginSteps = new LoginSteps(Driver);
         DashboardPage dashboardPage = loginSteps
             .SuccessfulLogin(Configurator.AppSettings.Username, Configurator.AppSettings.Password);
-        projectsPage = projectSteps.AddProject("AutoProject");
+        dashboardPage.ClickAddProjectBtn();
+        addProjectPage.InputFieldName.SendKeys("AutoProject");
+        Thread.Sleep(4000);
+        addProjectPage.ClickAddButton();
+        //projectsPage = projectSteps.AddProject("AutoProject");
         Assert.That(projectsPage.IsPageOpened);
         Assert.That(projectsPage.GetSuccessAddProjectLabel, Is.EqualTo(expectedText));
 
