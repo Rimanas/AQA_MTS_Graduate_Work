@@ -1,11 +1,5 @@
 ﻿using AQA_MTS_Graduate_Work.Helpers;
-using AQA_MTS_Graduate_Work.Pages.AddProjectPage;
 using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AQA_MTS_Graduate_Work.Pages.AddMilestonePage;
     internal class AddMilestonePage : MilestoneBasePage
@@ -18,7 +12,7 @@ namespace AQA_MTS_Graduate_Work.Pages.AddMilestonePage;
     private static readonly By AddButtonBy = By.CssSelector("#accept");
 
     // Инициализация класса
-    public AddMilestonePage(IWebDriver driver) : base(driver)
+    public AddTestCasePage(IWebDriver driver) : base(driver)
     {
     }
 

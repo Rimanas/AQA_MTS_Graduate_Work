@@ -1,10 +1,10 @@
 ﻿using OpenQA.Selenium;
 
-namespace AQA_MTS_Graduate_Work.Pages.AddMilestonePage;
-    public class MilestoneBasePage : BasePage
+namespace AQA_MTS_Graduate_Work.Pages.AddTestcasePage;
+    public class TestCaseBasePage : BasePage
     {
         // Инициализация класса
-        public MilestoneBasePage(IWebDriver driver) : base(driver)
+        public TestCaseBasePage(IWebDriver driver) : base(driver)
         {
         }
 
