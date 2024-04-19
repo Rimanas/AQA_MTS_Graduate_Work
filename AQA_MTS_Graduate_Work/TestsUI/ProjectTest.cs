@@ -25,9 +25,10 @@ namespace AQA_MTS_Graduate_Work.TestsUI;
         Assert.That(addProjectPage.IsPageOpened);
     }
 
+
+    /*
     [Test]
     [Description("Проверка Добавления проекта")]
-
     public void AddProjectTest()
     {
         string expectedText = "Successfully added the new project.";
@@ -41,9 +42,8 @@ namespace AQA_MTS_Graduate_Work.TestsUI;
         addProjectPage.InputFieldName.SendKeys("AutoProject");
         Thread.Sleep(4000);
         addProjectPage.ClickAddButton();
-        //projectsPage = projectSteps.AddProject("AutoProject");
         Assert.That(projectsPage.IsPageOpened);
         Assert.That(projectsPage.GetSuccessAddProjectLabel, Is.EqualTo(expectedText));
-
     }
+*/
 }

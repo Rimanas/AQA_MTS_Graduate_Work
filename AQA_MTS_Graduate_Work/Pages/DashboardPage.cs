@@ -15,12 +15,12 @@ public class DashboardPage : BasePage
     private static readonly By TitleLabelBy = By.ClassName("page_title");
     private static readonly By DownloadButtonBy = By.CssSelector("#clickDownload"); 
     private static readonly By IconTwitterBy = By.CssSelector("[class='icon-header-twitter']");
-    private static readonly By IconTwitterTextBy = By.CssSelector("[tooltip-text*='Twitter']");
-    private static readonly By DownloadTextLabelBy = By.CssSelector("[tooltip-text='Download']");
+    private static readonly By IconTwitterTextBy = By.XPath("//*[@href=\"http://twitter.com/testrail\" and @tabindex=\"-1\"]");
     private static readonly By NavigateBtnBy = By.CssSelector("[data-testid='navigationUser']");
     private static readonly By NavigateBtnTextBy = By.CssSelector("[data-testid='navigationUser']");
     private static readonly By AddProjectBtnBy = By.CssSelector("[class='sidebar-button']");
-    
+    private static readonly By OpenProjectBtnBy = By.XPath("//*[@id=\"project-4\"]/div/div/*[@href=\"index.php?/projects/overview/4\"]");
+
     // Инициализация класса
     public DashboardPage(IWebDriver driver) : base(driver)
     {
@@ -44,17 +44,9 @@ public class DashboardPage : BasePage
     public IWebElement NavigateBtn => WaitsHelper.WaitForExists(NavigateBtnBy);
     public IWebElement NavigateBtnText => WaitsHelper.WaitForExists(NavigateBtnTextBy);
     public IWebElement AddProjectBtn => WaitsHelper.WaitForExists(AddProjectBtnBy);
-    public IWebElement DownloadTextLabel => WaitsHelper.WaitForExists(DownloadTextLabelBy);
+    public IWebElement OpenProjectBtn => WaitsHelper.WaitForExists(OpenProjectBtnBy);
 
     //Комплексные
-    public void MouseHover()
-    {
-        Actions actions = new Actions(Driver);
-        actions
-            .MoveToElement(DownloadButton)
-            .Build()
-            .Perform();
-    }
 
     public void MouseHoverBird()
     {
@@ -75,14 +67,15 @@ public class DashboardPage : BasePage
     }
 
     public void ClickAddProjectBtn() => AddProjectBtn.Click();
-    public string DownLoadText()
+    public void ClickOpenProjectBtn() => OpenProjectBtn.Click();
+    public string TwitterText()
     {
-        return DownloadTextLabel.Text;
+        return IconTwitterText.GetAttribute("tooltip-text");
     }
     public string NavigateBtnTextMethod()
     {
         return NavigateBtnText.Text;
     }
-    public string GetDownloadTextLabel() => DownloadTextLabel.Text.Trim();
     public string GetNavigateBtnText() => NavigateBtnText.Text.Trim();
+    public string GetTwitterText() => IconTwitterText.GetAttribute("tooltip-text"); 
 }
