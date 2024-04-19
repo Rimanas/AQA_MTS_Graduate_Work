@@ -12,7 +12,7 @@ namespace AQA_MTS_Graduate_Work.Pages.AddMilestonePage;
     private static readonly By AddButtonBy = By.CssSelector("#accept");
 
     // Инициализация класса
-    public AddTestCasePage(IWebDriver driver) : base(driver)
+    public AddMilestonePage(IWebDriver driver) : base(driver)
     {
     }
 

@@ -11,7 +11,7 @@ namespace AQA_MTS_Graduate_Work.Pages.AddtestCasePage;
     private static readonly By TitleLabelBy = By.ClassName("page_title");
     private static readonly By AddImagePreCondBtnBy = By.XPath("//*[@for=\"custom_preconds\"]/span/a/*[@class=\"icon-markdown-image\"]");
     private static readonly By DialogWindAttachFileBy = By.CssSelector("[class='ui-dialog-title']");
-    private static readonly By AttachFileBtnBy = By.CssSelector("[class='attachment-library-add-icon dz-clickable']");
+    private static readonly By AttachFileBtnBy = By.CssSelector("[id='libraryAddAttachment']");
     private static readonly By AttachFileBy = By.CssSelector("[title='myFile.jpg']");
 
     // Инициализация класса
@@ -37,5 +37,7 @@ namespace AQA_MTS_Graduate_Work.Pages.AddtestCasePage;
     public IWebElement AttachFile => WaitsHelper.WaitForExists(AttachFileBy);
 
     // Методы действий с элементами
-    public void ClickAddButton() => AddImagePreCondBtn.Click();
+    public void ClickAddImageButton() => AddImagePreCondBtn.Click();
+    public void ClickAddAttachFileButton() => AttachFileBtn.Click();
+
 }

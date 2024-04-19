@@ -14,7 +14,7 @@ public class MilestoneTest : BaseTest
     public void AddMilestoneTest()
     {
         string expectedText = "Successfully added the new milestone.";
-        AddTestCasePage addMilestonePage = new AddMilestonePage(Driver);
+        AddMilestonePage addMilestonePage = new AddMilestonePage(Driver);
         OwnProjectPage ownProjectPage = new OwnProjectPage(Driver);
         MilestonesPage milestonesPage = new MilestonesPage(Driver);
         LoginSteps loginSteps = new LoginSteps(Driver);
