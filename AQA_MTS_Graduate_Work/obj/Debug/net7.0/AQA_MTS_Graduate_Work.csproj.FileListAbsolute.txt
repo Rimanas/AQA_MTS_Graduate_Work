@@ -118,3 +118,4 @@ C:\Users\Alina\Documents\work\AQA_MTS_Graduate_Work\AQA_MTS_Graduate_Work\obj\De
 C:\Users\Alina\Documents\work\AQA_MTS_Graduate_Work\AQA_MTS_Graduate_Work\obj\Debug\net7.0\ref\AQA_MTS_Graduate_Work.dll
 C:\Users\Alina\Documents\work\AQA_MTS_Graduate_Work\AQA_MTS_Graduate_Work\bin\Debug\net7.0\appsettings.json
 C:\Users\Alina\Documents\work\AQA_MTS_Graduate_Work\AQA_MTS_Graduate_Work\bin\Debug\net7.0\nunit.framework.legacy.dll
+C:\Users\Alina\Documents\work\AQA_MTS_Graduate_Work\AQA_MTS_Graduate_Work\bin\Debug\net7.0\Resources\myFile.jpg
