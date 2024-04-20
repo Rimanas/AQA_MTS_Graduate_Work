@@ -28,7 +28,6 @@ namespace AQA_MTS_Graduate_Work.Pages.AddProjectPage;
         return TitleLabel.Text.Trim().Equals("Projects");
     }
 
-    // Атомарные методы
     // Методы поиска элементов
     public IWebElement SuccessfullyAddProjectText => WaitsHelper.WaitForExists(SuccessfullyAddProjectTextBy);
     public IWebElement TitleLabel => WaitsHelper.WaitForExists(TitleLabelBy);

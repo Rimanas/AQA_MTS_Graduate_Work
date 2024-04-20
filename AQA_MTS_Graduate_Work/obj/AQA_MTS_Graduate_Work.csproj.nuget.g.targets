@@ -16,5 +16,6 @@
     <Import Project="$(NuGetPackageRoot)microsoft.extensions.configuration.fileextensions\9.0.0-preview.3.24172.9\buildTransitive\netcoreapp2.0\Microsoft.Extensions.Configuration.FileExtensions.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.extensions.configuration.fileextensions\9.0.0-preview.3.24172.9\buildTransitive\netcoreapp2.0\Microsoft.Extensions.Configuration.FileExtensions.targets')" />
     <Import Project="$(NuGetPackageRoot)microsoft.extensions.configuration.json\9.0.0-preview.3.24172.9\buildTransitive\netcoreapp2.0\Microsoft.Extensions.Configuration.Json.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.extensions.configuration.json\9.0.0-preview.3.24172.9\buildTransitive\netcoreapp2.0\Microsoft.Extensions.Configuration.Json.targets')" />
     <Import Project="$(NuGetPackageRoot)coverlet.collector\3.2.0\build\netstandard1.0\coverlet.collector.targets" Condition="Exists('$(NuGetPackageRoot)coverlet.collector\3.2.0\build\netstandard1.0\coverlet.collector.targets')" />
+    <Import Project="$(NuGetPackageRoot)aspectinjector\2.8.1\buildTransitive\netstandard2.0\AspectInjector.targets" Condition="Exists('$(NuGetPackageRoot)aspectinjector\2.8.1\buildTransitive\netstandard2.0\AspectInjector.targets')" />
   </ImportGroup>
 </Project>

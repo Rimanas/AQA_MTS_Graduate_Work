@@ -13,7 +13,7 @@ public class AddProjectPage : ProjectBasePage
     //Описание элементов
     private static readonly By TitleLabelBy = By.ClassName("page_title");
     private static readonly By InputFieldNameBy = By.Id("name");
-    private static readonly By AddButtonBy = By.CssSelector("#accept");
+    private static readonly By AddButtonBy = By.Id("accept");
 
     // Инициализация класса
     public AddProjectPage(IWebDriver driver) : base(driver)
@@ -29,7 +29,6 @@ public class AddProjectPage : ProjectBasePage
         return TitleLabel.Text.Trim().Equals("Add Project");
     }
 
-    // Атомарные методы
     // Методы поиска элементов
     public IWebElement AddButton => WaitsHelper.WaitForExists(AddButtonBy);
     public IWebElement TitleLabel => WaitsHelper.WaitForExists(TitleLabelBy);

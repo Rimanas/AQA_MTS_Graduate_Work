@@ -3,16 +3,27 @@ using AQA_MTS_Graduate_Work.Helpers.Configuration;
 using AQA_MTS_Graduate_Work.Helpers;
 using AQA_MTS_Graduate_Work.Steps;
 using OpenQA.Selenium;
+using Allure.NUnit;
+using Allure.Net.Commons;
+using System.Text;
 
 namespace AQA_MTS_Graduate_Work.TestsUI;
 //[Parallelizable(scope: ParallelScope.All)]
-//[FixtureLifeCycle(LifeCycle.InstancePerTestCase)]
+[FixtureLifeCycle(LifeCycle.InstancePerTestCase)]
+[AllureNUnit]
 public class BaseTest
 {
     protected IWebDriver Driver { get; private set; }
     protected WaitsHelper WaitsHelper { get; private set; }
 
     protected LoginSteps LoginSteps;
+    protected DashboardStep DashboardStep;
+    protected ProjectSteps ProjectSteps;
+    [OneTimeSetUp]
+    public static void GlobalSetup()
+    {
+        AllureLifecycle.Instance.CleanupResultDirectory();
+    }
 
     [SetUp]
     public void FactoryDriverTest()
@@ -21,6 +32,8 @@ public class BaseTest
         WaitsHelper = new WaitsHelper(Driver, TimeSpan.FromSeconds(Configurator.WaitsTimeout));
 
         LoginSteps = new LoginSteps(Driver);
+        DashboardStep = new DashboardStep(Driver);
+        ProjectSteps = new ProjectSteps(Driver);
 
         Driver.Navigate().GoToUrl(Configurator.AppSettings.URL);
     }
@@ -28,6 +41,21 @@ public class BaseTest
     [TearDown]
     public void TearDown()
     {
-        Driver.Quit();
+        try
+        {
+            if (TestContext.CurrentContext.Result.Outcome.Status == NUnit.Framework.Interfaces.TestStatus.Failed)
+            {
+                Screenshot screenshot = ((ITakesScreenshot)Driver).GetScreenshot();
+                byte[] screenshotBytes = screenshot.AsByteArray;
+
+                AllureApi.AddAttachment("Screenshot", "image/png", screenshotBytes);
+                AllureApi.AddAttachment("error.txt", "text/plain", Encoding.UTF8.GetBytes(TestContext.CurrentContext.Result.Message));
+            }
+        }
+
+        finally
+        {
+            Driver.Quit();
+        }
     }
 }

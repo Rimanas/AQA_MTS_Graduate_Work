@@ -13,13 +13,13 @@ public class DashboardPage : BasePage
 
     // Описание элементов
     private static readonly By TitleLabelBy = By.ClassName("page_title");
-    private static readonly By DownloadButtonBy = By.CssSelector("#clickDownload"); 
+    private static readonly By DownloadButtonBy = By.Id("clickDownload");
     private static readonly By IconTwitterBy = By.CssSelector("[class='icon-header-twitter']");
     private static readonly By IconTwitterTextBy = By.XPath("//*[@href=\"http://twitter.com/testrail\" and @tabindex=\"-1\"]");
     private static readonly By NavigateBtnBy = By.CssSelector("[data-testid='navigationUser']");
     private static readonly By NavigateBtnTextBy = By.CssSelector("[data-testid='navigationUser']");
     private static readonly By AddProjectBtnBy = By.CssSelector("[class='sidebar-button']");
-    private static readonly By OpenProjectBtnBy = By.XPath("//*[@id=\"project-4\"]/div/div/*[@href=\"index.php?/projects/overview/4\"]");
+    private static readonly By OpenProjectBtnBy = By.XPath("//*[@id='project-4']/div/div/*[@href=\"index.php?/projects/overview/4\"]");
 
     // Инициализация класса
     public DashboardPage(IWebDriver driver) : base(driver)

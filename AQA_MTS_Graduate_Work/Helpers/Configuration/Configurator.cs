@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using AQA_MTS_Graduate_Work.Models;
+using AQA_MTS_Graduate_Work.Models.Enums;
+using Microsoft.Extensions.Configuration;
 using System.Reflection;
 
 namespace AQA_MTS_Graduate_Work.Helpers.Configuration
@@ -44,6 +46,37 @@ namespace AQA_MTS_Graduate_Work.Helpers.Configuration
                 return appSettings;
             }
         }
+
+        public static List<User?> Users
+        {
+            get
+            {
+                List<User?> users = new List<User?>();
+                var child = Configuration.GetSection("Users");
+                foreach (var section in child.GetChildren())
+                {
+                    var user = new User
+                    {
+                        Password = section["Password"],
+                        Username = section["Username"]
+                    };
+                    user.UserType = section["UserType"].ToLower() switch
+                    {
+                        "admin" => UserType.Admin,
+                        "standart" => UserType.User,
+                        _ => user.UserType
+                    };
+
+                    users.Add(user);
+                }
+
+                return users;
+            }
+        }
+
+        public static User? Admin => Users.Find(x => x?.UserType == UserType.Admin);
+
+        public static User? UserByUsername(string username) => Users.Find(x => x?.Username == username);
 
         public static string? BrowserType => Configuration[nameof(BrowserType)];
 

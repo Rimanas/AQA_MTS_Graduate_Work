@@ -6,6 +6,8 @@ using AQA_MTS_Graduate_Work.Pages.TestCasesPage;
 using AQA_MTS_Graduate_Work.Pages.AddtestCasePage;
 using System.Reflection;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
+using SeleniumExtras.WaitHelpers;
 
 namespace AQA_MTS_Graduate_Work.TestsUI;
 internal class TestCaseTest : BaseTest
@@ -16,11 +18,6 @@ internal class TestCaseTest : BaseTest
     public void FileUploadTest()
     {
         var myFile = "myFile.jpg";
-        // Получаем путь к исполняемому файлу (exe)
-        string assemblyPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-        // Конструируем путь к файлу внутри проекта
-        string filePath = Path.Combine(assemblyPath, "Resources", myFile);
-        //fileUploadPath.SendKeys(filePath);
         OwnProjectPage ownProjectPage = new OwnProjectPage(Driver);
         TestCasesPage testCasesPage = new TestCasesPage(Driver);
         AddTestCasePage addTestCasePage = new AddTestCasePage(Driver);
@@ -33,11 +30,22 @@ internal class TestCaseTest : BaseTest
         addTestCasePage.ClickAddImageButton();
         Thread.Sleep(5000);
         //нажать кнопку загрузитьь файл
-        addTestCasePage.ClickAddAttachFileButton();
-        addTestCasePage.AttachFileBtn.SendKeys(filePath);
-        Thread.Sleep(1000);
+        //addTestCasePage.ClickAddAttachFileButton();
+        var filePathQ = WaitsHelper.WaitForExists(By.CssSelector("[id='libraryAttachmentsAddItem']"));
+
+        // Получаем путь к исполняемому файлу (exe)
+        string assemblyPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+        
+        // Конструируем путь к файлу внутри проекта
+        string filePath = Path.Combine(assemblyPath, "Resources", myFile);
+        filePathQ.SendKeys(filePath);
+        Thread.Sleep(6000);
         // Проверить, что имя файла на странице совпадает с именем загруженного файла
+        //Assert.That(Driver.FindElement(By.CssSelector("[id='libraryDeleteAttachment']")).Displayed);    //элемент находит
         Assert.That(addTestCasePage.AttachFile.Text, Is.EqualTo(myFile));
+        //Assert.That(Driver.FindElement(By.CssSelector("[id='libraryAttachmentsAddItem']")).Displayed);    //элемент находит
+
+
     }
 }
 

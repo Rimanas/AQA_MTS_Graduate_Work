@@ -1,0 +1,45 @@
+{
+  "uuid": "93b1b6c8-294d-4619-8800-fc0baabef490",
+  "historyId": "656cbaeb680356e7b803c834cb005e5c",
+  "testCaseId": "0dce8517b3f8fe497dcca388e1ad74fd",
+  "fullName": "AQA_MTS_Graduate_Work:AQA_MTS_Graduate_Work.TestsUI.LoginTest.InvalidUsernameLoginTest()",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "LAPTOP-5N040E8C"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "NUnit 3"
+    },
+    {
+      "name": "package",
+      "value": "AQA_MTS_Graduate_Work.TestsUI"
+    },
+    {
+      "name": "testMethod",
+      "value": "InvalidUsernameLoginTest"
+    },
+    {
+      "name": "testClass",
+      "value": "LoginTest"
+    }
+  ],
+  "links": [],
+  "name": "InvalidUsernameLoginTest",
+  "status": "passed",
+  "stage": "finished",
+  "steps": [],
+  "attachments": [],
+  "parameters": [],
+  "start": 1713654858182,
+  "stop": 1713654866681
+}

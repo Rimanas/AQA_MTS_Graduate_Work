@@ -9,10 +9,10 @@ namespace AQA_MTS_Graduate_Work.Pages.AddMilestonePage;
     //Описание элементов
     private static readonly By TitleLabelBy = By.ClassName("page_title");
     private static readonly By SuccessfullyAddMilestoneTextBy = By.CssSelector("[class='message message-success']");
-    private static readonly By CheckBoxSelectAllBy = By.XPath("//*[@id=\"active\"]/*/*[@name='select_all']");
+    private static readonly By CheckBoxSelectAllBy = By.CssSelector("#active [name='select_all']");
     private static readonly By DeleteMilestoneBtnBy = By.CssSelector("[class='button button-negative button-delete']");
     private static readonly By DialogWindowLabelBy = By.CssSelector("[class='ui-dialog-title']");
-    private static readonly By DialWindConfirmCheckBoxBy = By.CssSelector("[id='confirm-check']");
+    private static readonly By DialWindConfirmCheckBoxBy = By.Id("confirm-check");
     private static readonly By DialWindDeleteBtnBy = By.CssSelector("[data-testid='deleteCaseDialogActionDefault']");
     private static readonly By SuccessfullDeleteMilestoneTextBy = By.CssSelector("[class='message message-success']");
     // Инициализация класса
@@ -30,7 +30,6 @@ namespace AQA_MTS_Graduate_Work.Pages.AddMilestonePage;
     }
 
     // Атомарные методы
-    // Методы поиска элементов
     public IWebElement SuccessfullyAddMilestoneText => WaitsHelper.WaitForExists(SuccessfullyAddMilestoneTextBy);
     public IWebElement TitleLabel => WaitsHelper.WaitForExists(TitleLabelBy);
     public IWebElement CheckBoxSelectAll => WaitsHelper.WaitForExists(CheckBoxSelectAllBy);

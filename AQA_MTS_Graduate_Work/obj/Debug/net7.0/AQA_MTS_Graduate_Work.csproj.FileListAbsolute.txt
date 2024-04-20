@@ -119,3 +119,10 @@ C:\Users\Alina\Documents\work\AQA_MTS_Graduate_Work\AQA_MTS_Graduate_Work\obj\De
 C:\Users\Alina\Documents\work\AQA_MTS_Graduate_Work\AQA_MTS_Graduate_Work\bin\Debug\net7.0\appsettings.json
 C:\Users\Alina\Documents\work\AQA_MTS_Graduate_Work\AQA_MTS_Graduate_Work\bin\Debug\net7.0\nunit.framework.legacy.dll
 C:\Users\Alina\Documents\work\AQA_MTS_Graduate_Work\AQA_MTS_Graduate_Work\bin\Debug\net7.0\Resources\myFile.jpg
+C:\Users\Alina\Documents\work\AQA_MTS_Graduate_Work\AQA_MTS_Graduate_Work\bin\Debug\net7.0\Allure.Net.Commons.dll
+C:\Users\Alina\Documents\work\AQA_MTS_Graduate_Work\AQA_MTS_Graduate_Work\bin\Debug\net7.0\Allure.NUnit.dll
+C:\Users\Alina\Documents\work\AQA_MTS_Graduate_Work\AQA_MTS_Graduate_Work\bin\Debug\net7.0\AspectInjector.Broker.dll
+C:\Users\Alina\Documents\work\AQA_MTS_Graduate_Work\AQA_MTS_Graduate_Work\bin\Debug\net7.0\MimeTypesMap.dll
+C:\Users\Alina\Documents\work\AQA_MTS_Graduate_Work\AQA_MTS_Graduate_Work\bin\Debug\net7.0\Resources\schema.json
+C:\Users\Alina\Documents\work\AQA_MTS_Graduate_Work\AQA_MTS_Graduate_Work\bin\Debug\net7.0\NLog.dll
+C:\Users\Alina\Documents\work\AQA_MTS_Graduate_Work\AQA_MTS_Graduate_Work\bin\Debug\net7.0\RestSharp.dll

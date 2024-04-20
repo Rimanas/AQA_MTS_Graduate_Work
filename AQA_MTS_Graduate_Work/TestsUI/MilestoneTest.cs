@@ -9,7 +9,8 @@ namespace AQA_MTS_Graduate_Work.TestsUI;
 public class MilestoneTest : BaseTest
 {
     
-    [Test, Order(1)]
+    [Test]
+    [Order(1)]
     [Description("Проверка Добавления Milestone")]
     public void AddMilestoneTest()
     {
@@ -21,16 +22,15 @@ public class MilestoneTest : BaseTest
         DashboardPage dashboardPage = loginSteps
             .SuccessfulLogin(Configurator.AppSettings.Username, Configurator.AppSettings.Password);
         dashboardPage.ClickOpenProjectBtn();
-        Thread.Sleep(2000);
         ownProjectPage.ClickAddMilestoneButton();
         addMilestonePage.InputFieldName.SendKeys("AutoMilestone");
         addMilestonePage.ClickAddButton();
-        Thread.Sleep(1000);
         //Assert.That(addMilestonePage.IsPageOpened);
         Assert.That(milestonesPage.GetSuccessAddMilestoneLabel, Is.EqualTo(expectedText));
     }
 
-    [Test, Order(2)]
+    [Test]
+    [Order(2)]
     [Description("Проверка Диалогового окна при попытке удаления Milestone")]
     public void DialogWindowTest()
     {
@@ -42,16 +42,15 @@ public class MilestoneTest : BaseTest
         DashboardPage dashboardPage = loginSteps
             .SuccessfulLogin(Configurator.AppSettings.Username, Configurator.AppSettings.Password);
         dashboardPage.ClickOpenProjectBtn();
-        Thread.Sleep(1000);
         ownProjectPage.ClickMilestonesButton();
         milestonesPage.ClickCheckBoxSelectAll();
         milestonesPage.ClickDeleteMilestoneBtnAll();
-        Thread.Sleep(1000);
         Assert.That(milestonesPage.GetDialogWindowLabelText, Is.EqualTo(expectedTextDialogWindow));
         Assert.That(milestonesPage.DialWindConfirmCheckBox.Displayed, Is.True);
     }
 
-    [Test, Order(3)]
+    [Test]
+    [Order(3)]
     [Description("Проверка удаления Milestone")]
     public void DeleteMilestoneTest()
     {
@@ -62,13 +61,11 @@ public class MilestoneTest : BaseTest
         DashboardPage dashboardPage = loginSteps
             .SuccessfulLogin(Configurator.AppSettings.Username, Configurator.AppSettings.Password);
         dashboardPage.ClickOpenProjectBtn();
-        Thread.Sleep(1000);
         ownProjectPage.ClickMilestonesButton();
         milestonesPage.ClickCheckBoxSelectAll();
         milestonesPage.ClickDeleteMilestoneBtnAll();
         milestonesPage.ClickDialWindConfirmCheckBox();
         milestonesPage.ClickDialWindDeleteBtn();
-        Thread.Sleep(1000);
         Assert.That(milestonesPage.GetSuccessfullDeleteMilestoneText, Is.EqualTo(deleteExpectedText));
     }
 }
