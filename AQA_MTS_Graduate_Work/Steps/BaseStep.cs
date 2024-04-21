@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using AQA_MTS_Graduate_Work.Pages.AddMilestonePage;
+using OpenQA.Selenium;
 
 namespace AQA_MTS_Graduate_Work.Steps;
 public class BaseStep
@@ -9,4 +10,5 @@ public class BaseStep
     {
         Driver = driver;
     }
+    protected MilestonesPage? MilestonesPage { get; set; }
 }

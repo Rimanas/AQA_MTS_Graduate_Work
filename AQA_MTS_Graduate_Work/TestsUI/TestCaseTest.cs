@@ -8,6 +8,7 @@ using System.Reflection;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using SeleniumExtras.WaitHelpers;
+using Allure.NUnit.Attributes;
 
 namespace AQA_MTS_Graduate_Work.TestsUI;
 internal class TestCaseTest : BaseTest
@@ -15,6 +16,7 @@ internal class TestCaseTest : BaseTest
 
     [Test, Order(1)]
     [Description("Проверка Загрузки Файла")]
+    [AllureSubSuite("Successful Upload File Test")]
     public void FileUploadTest()
     {
         var myFile = "myFile.jpg";
@@ -28,24 +30,12 @@ internal class TestCaseTest : BaseTest
         ownProjectPage.ClickTestCaseButton();
         testCasesPage.ClickAddTestCaseBtn();
         addTestCasePage.ClickAddImageButton();
-        Thread.Sleep(5000);
-        //нажать кнопку загрузитьь файл
-        //addTestCasePage.ClickAddAttachFileButton();
-        var filePathQ = WaitsHelper.WaitForExists(By.CssSelector("[id='libraryAttachmentsAddItem']"));
-
         // Получаем путь к исполняемому файлу (exe)
-        string assemblyPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-        
+        string assemblyPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);       
         // Конструируем путь к файлу внутри проекта
         string filePath = Path.Combine(assemblyPath, "Resources", myFile);
-        filePathQ.SendKeys(filePath);
-        Thread.Sleep(6000);
-        // Проверить, что имя файла на странице совпадает с именем загруженного файла
-        //Assert.That(Driver.FindElement(By.CssSelector("[id='libraryDeleteAttachment']")).Displayed);    //элемент находит
-        Assert.That(addTestCasePage.AttachFile.Text, Is.EqualTo(myFile));
-        //Assert.That(Driver.FindElement(By.CssSelector("[id='libraryAttachmentsAddItem']")).Displayed);    //элемент находит
-
-
+        addTestCasePage.AttachFileBtn.SendKeys(filePath);
+        Assert.That(addTestCasePage.AttachFile.Displayed);    //элемент находит        
     }
 }
 

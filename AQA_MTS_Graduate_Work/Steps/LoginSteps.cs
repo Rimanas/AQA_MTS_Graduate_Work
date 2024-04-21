@@ -1,4 +1,5 @@
-﻿using AQA_MTS_Graduate_Work.Pages;
+﻿using Allure.NUnit.Attributes;
+using AQA_MTS_Graduate_Work.Pages;
 using OpenQA.Selenium;
 
 namespace AQA_MTS_Graduate_Work.Steps;
@@ -12,6 +13,7 @@ public class LoginSteps : BaseStep
     }
 
     // Комплексные
+    [AllureStep]
     public DashboardPage SuccessfulLogin(string username, string password)
     {
         _loginPage.EmailInput.SendKeys(username);
@@ -21,6 +23,7 @@ public class LoginSteps : BaseStep
         return new DashboardPage(Driver);
     }
 
+    [AllureStep]
     public LoginPage IncorrectLogin(string username, string password)
     {
         _loginPage.EmailInput.SendKeys(username);
@@ -29,6 +32,8 @@ public class LoginSteps : BaseStep
 
         return _loginPage;
     }
+
+    [AllureStep]
     public string ErorrTextLogin()
     {
         return _loginPage.ErrorLabel.Text;

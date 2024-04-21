@@ -10,9 +10,9 @@ namespace AQA_MTS_Graduate_Work.Pages.AddtestCasePage;
 
     //Описание элементов
     private static readonly By TitleLabelBy = By.ClassName("page_title");
-    private static readonly By AddImagePreCondBtnBy = By.XPath("//*[@for='custom_preconds']/span/a/*[@class=\"icon-markdown-image\"]");
+    private static readonly By AddImagePreCondBtnBy = By.XPath("//*[@for='custom_preconds']/span/a/*[@class='icon-markdown-image']");
     private static readonly By DialogWindAttachFileBy = By.CssSelector("[class='ui-dialog-title']");
-    private static readonly By AttachFileBtnBy = By.CssSelector("[id='libraryAttachmentsAddItem']");
+    private static readonly By AttachFileBtnBy = By.XPath("//input[@type='file'][5]");
     private static readonly By AttachFileBy = By.CssSelector("[title='myFile.jpg']");
 
     // Инициализация класса
@@ -33,13 +33,9 @@ namespace AQA_MTS_Graduate_Work.Pages.AddtestCasePage;
     public IWebElement TitleLabel => WaitsHelper.WaitForExists(TitleLabelBy);
     public IWebElement AddImagePreCondBtn => WaitsHelper.WaitForExists(AddImagePreCondBtnBy);
     public IWebElement DialogWindAttachFile => WaitsHelper.WaitForExists(DialogWindAttachFileBy);
-    public IWebElement AttachFileBtn => WaitsHelper.WaitForElementClickable(AttachFileBtnBy);
-    //public IWebElement AttachFileBtn = wait.until(ExpectedConditions.elementToBeClickable(AttachFileBtnBy));
-
+    public IWebElement AttachFileBtn => WaitsHelper.WaitForExists(AttachFileBtnBy);
     public IWebElement AttachFile => WaitsHelper.WaitForExists(AttachFileBy);
 
     // Методы действий с элементами
     public void ClickAddImageButton() => AddImagePreCondBtn.Click();
-    public void ClickAddAttachFileButton() => AttachFileBtn.Click();
-
-}
+    public void ClickAddAttachFileButton() => AttachFileBtn.Click();}

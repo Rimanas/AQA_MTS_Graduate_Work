@@ -16,6 +16,7 @@ public class LoginTest : BaseTest
         Assert.That(dashboardPage.IsPageOpened);
     }
     [Test]
+    [Description("Проверка Неуспешного входа, ввод некорректных данных")]
     public void InvalidUsernameLoginTest()
     {
         // Проверка в Builder стилистике
@@ -25,27 +26,4 @@ public class LoginTest : BaseTest
                 .GetErrorLabelText(),
             Is.EqualTo("Email/Login or Password is incorrect. Please try again."));
     }
-
-    /*
-    [Test]
-    [Description("Проверка входа залоченного пользователя/ Пользователь locked_out_user")]
-    public void LockedUsernameLoginTest()
-    {
-        // Проверка
-
-        Assert.That(
-            new LoginSteps(Driver)
-                .IncorrectLogin("locked_out_user", Configurator.AppSettings.Password)
-                .GetErrorLabelText(),
-            Is.EqualTo("Epic sadface: Sorry, this user has been locked out."));
-    */
-    //Другой способ
-    /*        LoginPage loginPage = new LoginPage(Driver);
-          LoginSteps loginSteps = new LoginSteps(Driver);
-          loginSteps.IncorrectLogin("locked_out_user", Configurator.AppSettings.Password);
-          //loginPage.ErrorLabel.Text.Trim();
-          //Is.EqualTo("Epic sadface: Password is required");
-          Assert.That(loginPage.ErrorLabel.Text, Is.EqualTo("Epic sadface: Sorry, this user has been locked out."));
-    */
-
 }

@@ -1,4 +1,5 @@
-﻿using AQA_MTS_Graduate_Work.Pages;
+﻿using Allure.NUnit.Attributes;
+using AQA_MTS_Graduate_Work.Pages;
 using AQA_MTS_Graduate_Work.Pages.AddProjectPage;
 using OpenQA.Selenium;
 
@@ -11,6 +12,7 @@ namespace AQA_MTS_Graduate_Work.Steps;
     {
         _addProjectPage = new AddProjectPage(Driver);
     }
+    [AllureStep]
     public ProjectsPage AddProject(string projectName)
     {
         _addProjectPage.InputFieldName.SendKeys(projectName);

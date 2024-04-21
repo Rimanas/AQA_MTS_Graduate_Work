@@ -8,7 +8,7 @@ using Allure.Net.Commons;
 using System.Text;
 
 namespace AQA_MTS_Graduate_Work.TestsUI;
-//[Parallelizable(scope: ParallelScope.All)]
+[Parallelizable(scope: ParallelScope.All)]
 [FixtureLifeCycle(LifeCycle.InstancePerTestCase)]
 [AllureNUnit]
 public class BaseTest
@@ -19,6 +19,7 @@ public class BaseTest
     protected LoginSteps LoginSteps;
     protected DashboardStep DashboardStep;
     protected ProjectSteps ProjectSteps;
+    protected MilestoneSteps MilestoneSteps;
     [OneTimeSetUp]
     public static void GlobalSetup()
     {

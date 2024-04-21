@@ -1,4 +1,5 @@
-﻿using AQA_MTS_Graduate_Work.Pages;
+﻿using Allure.NUnit.Attributes;
+using AQA_MTS_Graduate_Work.Pages;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
 
@@ -12,10 +13,13 @@ namespace AQA_MTS_Graduate_Work.Steps;
         _dashboardPage = new DashboardPage(Driver);
     }
 
-    // Комплексные  !!!!!!!!!!!!!!!!!!Это можно удалить
-    public void MouseHover()
+    // Комплексные  
+    public void MouseHoverBird()
     {
         Actions actions = new Actions(Driver);
-        actions.MoveToElement(_dashboardPage.DownloadButton).Perform();
+        actions
+            .MoveToElement(_dashboardPage.IconTwitter)
+            .Build()
+            .Perform();
     }
 }
