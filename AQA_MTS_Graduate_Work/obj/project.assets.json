@@ -73,6 +73,19 @@
           "buildTransitive/netstandard2.0/AspectInjector.targets": {}
         }
       },
+      "Bogus/35.5.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Bogus.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Bogus.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "coverlet.collector/3.2.0": {
         "type": "package",
         "build": {
@@ -994,6 +1007,25 @@
         "package.png",
         "tools/install.ps1",
         "tools/uninstall.ps1"
+      ]
+    },
+    "Bogus/35.5.0": {
+      "sha512": "iCXszbIvvxgfb01bPe/s3R6pQSKX6rpcQWqM7wqDt+lsMogR6fkSWBwqOxLpdXmMB7mgZNNk2hm2M1shoIiekA==",
+      "type": "package",
+      "path": "bogus/35.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "bogus.35.5.0.nupkg.sha512",
+        "bogus.nuspec",
+        "lib/net40/Bogus.dll",
+        "lib/net40/Bogus.xml",
+        "lib/net6.0/Bogus.dll",
+        "lib/net6.0/Bogus.xml",
+        "lib/netstandard1.3/Bogus.dll",
+        "lib/netstandard1.3/Bogus.xml",
+        "lib/netstandard2.0/Bogus.dll",
+        "lib/netstandard2.0/Bogus.xml"
       ]
     },
     "coverlet.collector/3.2.0": {
@@ -2274,6 +2306,7 @@
   "projectFileDependencyGroups": {
     "net7.0": [
       "Allure.NUnit >= 2.12.0",
+      "Bogus >= 35.5.0",
       "Microsoft.Extensions.Configuration >= 9.0.0-preview.3.24172.9",
       "Microsoft.Extensions.Configuration.Abstractions >= 9.0.0-preview.3.24172.9",
       "Microsoft.Extensions.Configuration.Json >= 9.0.0-preview.3.24172.9",
@@ -2336,6 +2369,10 @@
           "Allure.NUnit": {
             "target": "Package",
             "version": "[2.12.0, )"
+          },
+          "Bogus": {
+            "target": "Package",
+            "version": "[35.5.0, )"
           },
           "Microsoft.Extensions.Configuration": {
             "target": "Package",

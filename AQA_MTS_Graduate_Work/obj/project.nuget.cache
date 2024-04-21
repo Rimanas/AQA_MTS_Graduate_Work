@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "tH8yqLD9MIqY/X6/NSBrscsHEVYxg8x4vPO3ZrcPgPZbFUdzgpWbZNTYRGa4SBJhegtipRBz1lVe2oE8N+YMkg==",
+  "dgSpecHash": "nLMa4VCJa9113FtEzjAfI0QP8W2Ue6m4msLavBtn8DgAJs69KHQII9jvk7EZ0leCQwL2F5qYElMralu/O4ZESA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Alina\\Documents\\work\\AQA_MTS_Graduate_Work\\AQA_MTS_Graduate_Work\\AQA_MTS_Graduate_Work.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,7 @@
     "C:\\Users\\Alina\\.nuget\\packages\\allure.nunit\\2.12.0\\allure.nunit.2.12.0.nupkg.sha512",
     "C:\\Users\\Alina\\.nuget\\packages\\anglesharp\\1.1.0\\anglesharp.1.1.0.nupkg.sha512",
     "C:\\Users\\Alina\\.nuget\\packages\\aspectinjector\\2.8.1\\aspectinjector.2.8.1.nupkg.sha512",
+    "C:\\Users\\Alina\\.nuget\\packages\\bogus\\35.5.0\\bogus.35.5.0.nupkg.sha512",
     "C:\\Users\\Alina\\.nuget\\packages\\coverlet.collector\\3.2.0\\coverlet.collector.3.2.0.nupkg.sha512",
     "C:\\Users\\Alina\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\9.0.0-preview.3.24172.9\\microsoft.bcl.asyncinterfaces.9.0.0-preview.3.24172.9.nupkg.sha512",
     "C:\\Users\\Alina\\.nuget\\packages\\microsoft.codecoverage\\17.7.1\\microsoft.codecoverage.17.7.1.nupkg.sha512",
