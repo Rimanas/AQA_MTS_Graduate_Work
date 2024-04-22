@@ -12,12 +12,16 @@
 
   <ItemGroup>
     <None Remove="appsettings.json" />
+    <None Remove="NLog.config" />
     <None Remove="Resources\myFile.jpg" />
     <None Remove="Resources\schema.json" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Include="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="NLog.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\myFile.jpg">
