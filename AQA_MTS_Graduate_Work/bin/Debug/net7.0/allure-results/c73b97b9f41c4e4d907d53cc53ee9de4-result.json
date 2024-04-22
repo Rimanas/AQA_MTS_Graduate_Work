@@ -1,12 +1,12 @@
 {
-  "uuid": "1c312bcb-b26b-4129-87da-0010b9a3a001",
-  "historyId": "aa0be658d419c530d02df3f20d0123e3",
-  "testCaseId": "baba49b2a2108d3d274a6852437a6e9e",
-  "fullName": "AQA_MTS_Graduate_Work:AQA_MTS_Graduate_Work.TestsUI.MilestoneTest.DialogWindowTest()",
+  "uuid": "74a485f6-2ff6-4ec4-a428-70e04227f6ad",
+  "historyId": "4dbd0baefb77c6703c6fa19e49a53d20",
+  "testCaseId": "693c2037a1cdaf2fa734500bf527c083",
+  "fullName": "AQA_MTS_Graduate_Work:AQA_MTS_Graduate_Work.TestsUI.TestCaseTest.FileUploadTest()",
   "labels": [
     {
       "name": "thread",
-      "value": "ParallelWorker#4"
+      "value": "ParallelWorker#8"
     },
     {
       "name": "host",
@@ -26,22 +26,22 @@
     },
     {
       "name": "testMethod",
-      "value": "DialogWindowTest"
+      "value": "FileUploadTest"
     },
     {
       "name": "testClass",
-      "value": "MilestoneTest"
+      "value": "TestCaseTest"
     },
     {
       "name": "subSuite",
-      "value": "Successful Dialog Window Test"
+      "value": "Successful Upload File Test"
     }
   ],
   "links": [],
-  "name": "DialogWindowTest",
+  "name": "FileUploadTest",
   "status": "passed",
   "stage": "finished",
-  "description": "Проверка Диалогового окна при попытке удаления Milestone\n",
+  "description": "Проверка Загрузки Файла\n",
   "steps": [
     {
       "name": "SuccessfulLogin",
@@ -66,12 +66,12 @@
           "excluded": false
         }
       ],
-      "start": 1713736848116,
-      "stop": 1713736849830
+      "start": 1713797882932,
+      "stop": 1713797885141
     }
   ],
   "attachments": [],
   "parameters": [],
-  "start": 1713736840844,
-  "stop": 1713736852282
+  "start": 1713797873073,
+  "stop": 1713797887807
 }

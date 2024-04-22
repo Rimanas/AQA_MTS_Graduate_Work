@@ -8,3 +8,4 @@ public class Case
     [JsonPropertyName("title")] public string? Title { get; set; }
     [JsonPropertyName("estimate")] public string? Estimate { get; set; }
     [JsonPropertyName("priority_id")] public int? PriorityId { get; set; }
+}

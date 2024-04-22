@@ -40,6 +40,7 @@ namespace AQA_MTS_Graduate_Work.Helpers.Configuration
                 var child = Configuration.GetSection("AppSettings");
 
                 appSettings.URL = child["URL"];
+                appSettings.URL = child["URI"];
                 appSettings.Username = child["Username"];
                 appSettings.Password = child["Password"];
 

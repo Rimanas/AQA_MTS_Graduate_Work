@@ -3,6 +3,7 @@ using RestSharp.Authenticators;
 using RestSharp;
 using System.Diagnostics;
 using NLog;
+using Allure.Net.Commons;
 
 namespace AQA_MTS_Graduate_Work.Clients;
 public sealed class RestClientExtended   //Обертка клиента

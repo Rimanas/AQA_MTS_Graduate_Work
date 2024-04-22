@@ -1,0 +1,12 @@
+{
+  "uuid": "69965701-259b-4fec-8168-450249d7c563",
+  "name": "AQA_MTS_Graduate_Work.TestsUI.TestCaseTest",
+  "children": [
+    "74a485f6-2ff6-4ec4-a428-70e04227f6ad"
+  ],
+  "befores": [],
+  "afters": [],
+  "links": [],
+  "start": 1713797873054,
+  "stop": 1713797887836
+}

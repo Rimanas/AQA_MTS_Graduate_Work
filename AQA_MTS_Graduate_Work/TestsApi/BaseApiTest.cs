@@ -1,8 +1,11 @@
-﻿using AQA_MTS_Graduate_Work.Clients;
+﻿using Allure.NUnit;
+using AQA_MTS_Graduate_Work.Clients;
 using AQA_MTS_Graduate_Work.Services;
 using NLog;
 
 namespace AQA_MTS_Graduate_Work.TestsApi;
+
+[AllureNUnit]
 public class BaseApiTest
 {
     private readonly Logger _logger = LogManager.GetCurrentClassLogger();

@@ -1,0 +1,51 @@
+{
+  "uuid": "2ff29a4a-d4e4-4eec-8338-91fefff9a9a5",
+  "historyId": "42561ca2580c086f73413e5282be822d",
+  "testCaseId": "c7683d58b9212400abca33834a6f8832",
+  "fullName": "AQA_MTS_Graduate_Work:AQA_MTS_Graduate_Work.TestsApi.MilestoneFakerTest.GetMilestoneTest()",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "LAPTOP-5N040E8C"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "NUnit 3"
+    },
+    {
+      "name": "package",
+      "value": "AQA_MTS_Graduate_Work.TestsApi"
+    },
+    {
+      "name": "testMethod",
+      "value": "GetMilestoneTest"
+    },
+    {
+      "name": "testClass",
+      "value": "MilestoneFakerTest"
+    }
+  ],
+  "links": [],
+  "name": "GetMilestoneTest",
+  "status": "passed",
+  "stage": "finished",
+  "steps": [],
+  "attachments": [
+    {
+      "name": "Console Output",
+      "source": "3986e53e-0c12-4099-bc69-118fbcac04fe-attachment.txt",
+      "type": "text/plain"
+    }
+  ],
+  "parameters": [],
+  "start": 1713809949430,
+  "stop": 1713809950058
+}

@@ -9,15 +9,17 @@
       "AQA_MTS_Graduate_Work/1.0.0": {
         "dependencies": {
           "Allure.NUnit": "2.12.0",
+          "Bogus": "35.5.0",
           "Microsoft.Extensions.Configuration": "9.0.0-preview.3.24172.9",
           "Microsoft.Extensions.Configuration.Abstractions": "9.0.0-preview.3.24172.9",
           "Microsoft.Extensions.Configuration.Json": "9.0.0-preview.3.24172.9",
           "Microsoft.NET.Test.Sdk": "17.7.1",
           "NLog": "5.2.8",
+          "NLog.Config": "4.7.15",
           "NUnit": "4.1.0",
           "NUnit.Analyzers": "4.1.0",
           "NUnit3TestAdapter": "4.5.0",
-          "RestSharp": "110.2.0",
+          "RestSharp": "110.2.1-alpha.0.20",
           "Selenium.WebDriver": "4.19.0",
           "SeleniumExtras.WaitHelpers": "1.0.2",
           "WebDriverManager": "2.17.2",
@@ -69,6 +71,14 @@
           "lib/netstandard2.0/AspectInjector.Broker.dll": {
             "assemblyVersion": "2.8.1.0",
             "fileVersion": "2.8.1.0"
+          }
+        }
+      },
+      "Bogus/35.5.0": {
+        "runtime": {
+          "lib/net6.0/Bogus.dll": {
+            "assemblyVersion": "35.5.0.0",
+            "fileVersion": "35.5.0.0"
           }
         }
       },
@@ -470,6 +480,13 @@
           }
         }
       },
+      "NLog.Config/4.7.15": {
+        "dependencies": {
+          "NLog": "5.2.8",
+          "NLog.Schema": "4.7.15"
+        }
+      },
+      "NLog.Schema/4.7.15": {},
       "NuGet.Frameworks/6.5.0": {
         "runtime": {
           "lib/netstandard2.0/NuGet.Frameworks.dll": {
@@ -492,14 +509,11 @@
       },
       "NUnit.Analyzers/4.1.0": {},
       "NUnit3TestAdapter/4.5.0": {},
-      "RestSharp/110.2.0": {
-        "dependencies": {
-          "System.Text.Json": "9.0.0-preview.3.24172.9"
-        },
+      "RestSharp/110.2.1-alpha.0.20": {
         "runtime": {
           "lib/net7.0/RestSharp.dll": {
-            "assemblyVersion": "110.2.0.0",
-            "fileVersion": "110.2.0.0"
+            "assemblyVersion": "110.2.1.0",
+            "fileVersion": "110.2.1.0"
           }
         }
       },
@@ -625,6 +639,13 @@
       "sha512": "sha512-8BScDeaLazJVFaa2Tt9hoWLhllnxXP3Sew+l/vktdZEcgoPOsqhlDqe6GXJvy7xVkdICAbKFsrcDJ0cfrDR6Mg==",
       "path": "aspectinjector/2.8.1",
       "hashPath": "aspectinjector.2.8.1.nupkg.sha512"
+    },
+    "Bogus/35.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-iCXszbIvvxgfb01bPe/s3R6pQSKX6rpcQWqM7wqDt+lsMogR6fkSWBwqOxLpdXmMB7mgZNNk2hm2M1shoIiekA==",
+      "path": "bogus/35.5.0",
+      "hashPath": "bogus.35.5.0.nupkg.sha512"
     },
     "coverlet.collector/3.2.0": {
       "type": "package",
@@ -759,6 +780,20 @@
       "path": "nlog/5.2.8",
       "hashPath": "nlog.5.2.8.nupkg.sha512"
     },
+    "NLog.Config/4.7.15": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-njc2NvwgAzEuH609TGO4yqpokcxXFdypHwG3I8hyLYIE4pr+j4KJB4ZhsyODVwkP/n2F2V4uJ24VW4icNyJMcA==",
+      "path": "nlog.config/4.7.15",
+      "hashPath": "nlog.config.4.7.15.nupkg.sha512"
+    },
+    "NLog.Schema/4.7.15": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-cBzca2abS5Qz8e40vIPZNWBiDAQaRY7PKWffBbazMAzvxGBM6/ZWgaAEmqHUOluhV41cuyXnHOzo485JPLeChg==",
+      "path": "nlog.schema/4.7.15",
+      "hashPath": "nlog.schema.4.7.15.nupkg.sha512"
+    },
     "NuGet.Frameworks/6.5.0": {
       "type": "package",
       "serviceable": true,
@@ -787,12 +822,12 @@
       "path": "nunit3testadapter/4.5.0",
       "hashPath": "nunit3testadapter.4.5.0.nupkg.sha512"
     },
-    "RestSharp/110.2.0": {
+    "RestSharp/110.2.1-alpha.0.20": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-FXGw0IMcqY7yO/hzS9QrD3iNswNgb9UxJnxWmfOxmGs4kRlZWqdtBoGPLuhlbgsDzX1RFo4WKui8TGGKXWKalw==",
-      "path": "restsharp/110.2.0",
-      "hashPath": "restsharp.110.2.0.nupkg.sha512"
+      "sha512": "sha512-xILKAVfkpoYhd5W/8ma4gWxlRoglgkkXFaIrbxuoMtK98hFePa1CSfLQ5mVKZhS9laYnZPaII+Eyuxtvo8zLwQ==",
+      "path": "restsharp/110.2.1-alpha.0.20",
+      "hashPath": "restsharp.110.2.1-alpha.0.20.nupkg.sha512"
     },
     "Selenium.WebDriver/4.19.0": {
       "type": "package",

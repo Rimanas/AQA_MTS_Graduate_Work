@@ -1,0 +1,12 @@
+{
+  "uuid": "404421dd-e625-4f3e-a556-64eb4fe1ed06",
+  "name": "AQA_MTS_Graduate_Work.TestsApi.MilestoneFakerTest.DeleteMilestoneTest",
+  "children": [
+    "e21d6805-73bf-4038-8b5f-c5075365a0a5"
+  ],
+  "befores": [],
+  "afters": [],
+  "links": [],
+  "start": 1713808778581,
+  "stop": 1713808778886
+}

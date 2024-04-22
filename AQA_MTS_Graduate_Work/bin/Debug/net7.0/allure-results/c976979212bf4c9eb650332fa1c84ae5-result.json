@@ -1,0 +1,58 @@
+{
+  "uuid": "e21d6805-73bf-4038-8b5f-c5075365a0a5",
+  "historyId": "a105a50c488472337ed1ed450f3c6b08",
+  "testCaseId": "5e7201d68e27900d6d2de77ad80bc549",
+  "fullName": "AQA_MTS_Graduate_Work:AQA_MTS_Graduate_Work.TestsApi.MilestoneFakerTest.DeleteMilestoneTest()",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "LAPTOP-5N040E8C"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "NUnit 3"
+    },
+    {
+      "name": "package",
+      "value": "AQA_MTS_Graduate_Work.TestsApi"
+    },
+    {
+      "name": "testMethod",
+      "value": "DeleteMilestoneTest"
+    },
+    {
+      "name": "testClass",
+      "value": "MilestoneFakerTest"
+    }
+  ],
+  "links": [],
+  "name": "DeleteMilestoneTest",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "  Assert.That(actualMilestone == HttpStatusCode.OK, Is.True)\r\n  Expected: True\r\n  But was:  False\r\n",
+    "trace": "   at AQA_MTS_Graduate_Work.TestsApi.MilestoneFakerTest.DeleteMilestoneTest() in C:\\Users\\Alina\\Documents\\work\\AQA_MTS_Graduate_Work\\AQA_MTS_Graduate_Work\\TestsApi\\MilestoneFakerTest.cs:line 111\r\n"
+  },
+  "stage": "finished",
+  "steps": [],
+  "attachments": [
+    {
+      "name": "Console Output",
+      "source": "c7a6211b-f2bc-403b-a1af-39bddc41639f-attachment.txt",
+      "type": "text/plain"
+    }
+  ],
+  "parameters": [],
+  "start": 1713808778581,
+  "stop": 1713808778885
+}

@@ -1,0 +1,5 @@
+2024/04/22 21:19:07.996|DEBUG|Post request to: index.php?/api/v2/add_milestone/{project_id} |AQA_MTS_Graduate_Work.Clients.RestClientExtended|
+2024/04/22 21:19:07.996|DEBUG|Request body: AQA_MTS_Graduate_Work.Models.Milestone |AQA_MTS_Graduate_Work.Clients.RestClientExtended|
+2024/04/22 21:19:08.660|DEBUG|Request finished with status code: OK |AQA_MTS_Graduate_Work.Clients.RestClientExtended|
+2024/04/22 21:19:08.660|DEBUG|Response content: {"id":29,"name":"a5ymv8lnbn","description":"white Tasty Underpass Practical Fresh Shirt Incredible Soft Cheese Organized Ergonomic Wooden Bike driver Handcrafted Rubber Computer proactive","start_on":null,"started_on":1713809950,"is_started":true,"due_on":null,"is_completed":false,"completed_on":null,"project_id":9,"parent_id":null,"refs":null,"url":"https:\/\/aqa9001.testrail.io\/index.php?\/milestones\/view\/29","milestones":[]} |AQA_MTS_Graduate_Work.Clients.RestClientExtended|
+2024/04/22 21:19:08.660|INFO|AQA_MTS_Graduate_Work.Models.Milestone |AQA_MTS_Graduate_Work.TestsApi.MilestoneFakerTest|
