@@ -1,6 +1,0 @@
-2024/04/22 20:59:37.328|DEBUG|Post request to: index.php?/api/v2/add_milestone/{project_id} |AQA_MTS_Graduate_Work.Clients.RestClientExtended|
-2024/04/22 20:59:37.328|DEBUG|Request body: AQA_MTS_Graduate_Work.Models.Milestone |AQA_MTS_Graduate_Work.Clients.RestClientExtended|
-2024/04/22 20:59:37.611|ERROR|Error retrieving response. Check inner details for more info. 
-Request failed with status code Forbidden |AQA_MTS_Graduate_Work.Clients.RestClientExtended|
-2024/04/22 20:59:37.611|DEBUG|Request finished with status code: Forbidden |AQA_MTS_Graduate_Work.Clients.RestClientExtended|
-2024/04/22 20:59:37.611|DEBUG|Response content: {"error":"The API is disabled for your installation. It can be enabled in the administration area in TestRail under Administration > Site Settings > API."} |AQA_MTS_Graduate_Work.Clients.RestClientExtended|

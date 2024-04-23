@@ -1,6 +1,0 @@
-2024/04/22 20:59:37.675|DEBUG|Get request to: index.php?/api/v2/get_project/{project_id} |AQA_MTS_Graduate_Work.Clients.RestClientExtended|
-2024/04/22 20:59:37.971|ERROR|Error retrieving response. Check inner details for more info. 
-Request failed with status code Forbidden |AQA_MTS_Graduate_Work.Clients.RestClientExtended|
-2024/04/22 20:59:37.971|DEBUG|Request finished with status code: Forbidden |AQA_MTS_Graduate_Work.Clients.RestClientExtended|
-2024/04/22 20:59:37.971|DEBUG|Response content: {"error":"The API is disabled for your installation. It can be enabled in the administration area in TestRail under Administration > Site Settings > API."} |AQA_MTS_Graduate_Work.Clients.RestClientExtended|
-2024/04/22 20:59:37.971|INFO|AQA_MTS_Graduate_Work.Models.Project |AQA_MTS_Graduate_Work.TestsApi.MilestoneFakerTest|
