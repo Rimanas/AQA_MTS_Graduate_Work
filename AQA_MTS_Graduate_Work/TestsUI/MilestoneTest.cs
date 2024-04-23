@@ -55,7 +55,7 @@ public class MilestoneTest : BaseTest
     [Order(3)]
     [Description("Проверка удаления Milestone")]
     [AllureSubSuite("Successful Deelete Milestone Test")]
-    public void DeleteMilestoneTest()
+    public void NDeleteMilestoneTest()
     {
         string deleteExpectedText = "Successfully deleted the milestone (s).";
         OwnProjectPage ownProjectPage = new OwnProjectPage(Driver);

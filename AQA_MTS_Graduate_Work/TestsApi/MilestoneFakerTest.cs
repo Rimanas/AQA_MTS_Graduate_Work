@@ -7,7 +7,7 @@ using System.Net;
 
 namespace AQA_MTS_Graduate_Work.TestsApi
 {
-    //[AllureSuite("API Tests")]
+    [AllureSuite("API Tests")]
     public class MilestoneFakerTest : BaseApiTest
     {
         private readonly Logger _logger = LogManager.GetCurrentClassLogger();

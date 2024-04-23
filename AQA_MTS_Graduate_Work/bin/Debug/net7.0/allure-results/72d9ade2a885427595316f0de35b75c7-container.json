@@ -1,0 +1,12 @@
+{
+  "uuid": "6254b6ae-a76e-4066-8090-04f3a467ca1f",
+  "name": "AQA_MTS_Graduate_Work.TestsUI.PopUpMessageTest.PopUpMessageNavigateTest",
+  "children": [
+    "4052cdd9-4764-495e-8906-274fa3965511"
+  ],
+  "befores": [],
+  "afters": [],
+  "links": [],
+  "start": 1713902145393,
+  "stop": 1713902160744
+}

@@ -1,4 +1,5 @@
-﻿using AQA_MTS_Graduate_Work.Helpers.Configuration;
+﻿using Allure.NUnit.Attributes;
+using AQA_MTS_Graduate_Work.Helpers.Configuration;
 using AQA_MTS_Graduate_Work.Pages;
 using AQA_MTS_Graduate_Work.Steps;
 
@@ -17,6 +18,7 @@ public class LoginTest : BaseTest
     }
     [Test]
     [Description("Проверка Неуспешного входа, ввод некорректных данных")]
+    [AllureStep]
     public void InvalidUsernameLoginTest()
     {
         // Проверка в Builder стилистике

@@ -1,0 +1,12 @@
+{
+  "uuid": "8ff611e0-92f5-4e45-831d-6f60845d302b",
+  "name": "AQA_MTS_Graduate_Work.TestsUI.TestCaseTest.FileUploadTest",
+  "children": [
+    "1922d6e9-2f9a-48c6-aa2b-111c6be97d79"
+  ],
+  "befores": [],
+  "afters": [],
+  "links": [],
+  "start": 1713902145394,
+  "stop": 1713902157502
+}
