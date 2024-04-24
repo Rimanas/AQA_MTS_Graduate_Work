@@ -70,7 +70,7 @@ namespace AQA_MTS_Graduate_Work.TestsApi
         }
 
         [Test]
-        [Order(2)]
+        [Order(3)]
         public void GetMilestoneTest()
         {
             var actualMilestone = MilestoneServices!.GetMilestone(_milestone.ID.ToString());
@@ -85,7 +85,7 @@ namespace AQA_MTS_Graduate_Work.TestsApi
         }
 
         [Test]
-        [Order(3)]
+        [Order(4)]
         public void UpdateMilestoneTest()
         {
             Milestone milestoneUpdate = new Milestone
@@ -103,7 +103,7 @@ namespace AQA_MTS_Graduate_Work.TestsApi
         }
 
         [Test]
-        [Order(4)]
+        [Order(5)]
         public void DeleteMilestoneTest()
         {
             var actualMilestone = MilestoneServices!.DeleteMilestone(_milestone.ID.ToString());
