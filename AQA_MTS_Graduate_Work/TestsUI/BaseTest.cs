@@ -8,7 +8,7 @@ using Allure.Net.Commons;
 using System.Text;
 
 namespace AQA_MTS_Graduate_Work.TestsUI;
-[Parallelizable(scope: ParallelScope.All)]
+[Parallelizable(scope: ParallelScope.Fixtures)]
 [FixtureLifeCycle(LifeCycle.InstancePerTestCase)]
 [AllureNUnit]
 public class BaseTest

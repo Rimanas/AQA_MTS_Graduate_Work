@@ -1,0 +1,73 @@
+{
+  "uuid": "9ae9a138-cd18-457a-ad3e-4a18e9f4a66d",
+  "historyId": "01820e20c21b976ba8be4b1c97a6e5b2",
+  "testCaseId": "f13668956ae25173629a5f2631c9e1a6",
+  "fullName": "AQA_MTS_Graduate_Work:AQA_MTS_Graduate_Work.TestsUI.PopUpMessageTest.PopUpMessageIconTwitterTest()",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#8"
+    },
+    {
+      "name": "host",
+      "value": "LAPTOP-5N040E8C"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "NUnit 3"
+    },
+    {
+      "name": "package",
+      "value": "AQA_MTS_Graduate_Work.TestsUI"
+    },
+    {
+      "name": "testMethod",
+      "value": "PopUpMessageIconTwitterTest"
+    },
+    {
+      "name": "testClass",
+      "value": "PopUpMessageTest"
+    }
+  ],
+  "links": [],
+  "name": "PopUpMessageIconTwitterTest",
+  "status": "passed",
+  "stage": "finished",
+  "description": "Проверка Всплывающего Twitter сообщения\n",
+  "steps": [
+    {
+      "name": "SuccessfulLogin",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "username",
+          "value": "\"rimanas_alina@mail.ru\"",
+          "excluded": false
+        },
+        {
+          "name": "password",
+          "value": "\"Qwerty11@\"",
+          "excluded": false
+        }
+      ],
+      "start": 1713988577307,
+      "stop": 1713988579719
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1713988562846,
+  "stop": 1713988582183
+}

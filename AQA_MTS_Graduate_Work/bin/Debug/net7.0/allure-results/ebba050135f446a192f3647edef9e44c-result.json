@@ -1,0 +1,77 @@
+{
+  "uuid": "75cdbbee-1002-47c6-97fc-50206208ba9d",
+  "historyId": "b3797649b2f1203d24078f546e6558bc",
+  "testCaseId": "b85d94e26e69b2868fb917defcf4c9f8",
+  "fullName": "AQA_MTS_Graduate_Work:AQA_MTS_Graduate_Work.TestsUI.MilestoneTest.AddMilestoneTest()",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#5"
+    },
+    {
+      "name": "host",
+      "value": "LAPTOP-5N040E8C"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "NUnit 3"
+    },
+    {
+      "name": "package",
+      "value": "AQA_MTS_Graduate_Work.TestsUI"
+    },
+    {
+      "name": "testMethod",
+      "value": "AddMilestoneTest"
+    },
+    {
+      "name": "testClass",
+      "value": "MilestoneTest"
+    },
+    {
+      "name": "subSuite",
+      "value": "Successful Add Milestone Test"
+    }
+  ],
+  "links": [],
+  "name": "AddMilestoneTest",
+  "status": "passed",
+  "stage": "finished",
+  "description": "Проверка Добавления Milestone\n",
+  "steps": [
+    {
+      "name": "SuccessfulLogin",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "username",
+          "value": "\"rimanas_alina@mail.ru\"",
+          "excluded": false
+        },
+        {
+          "name": "password",
+          "value": "\"Qwerty11@\"",
+          "excluded": false
+        }
+      ],
+      "start": 1713988569204,
+      "stop": 1713988579682
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1713988562846,
+  "stop": 1713988583680
+}

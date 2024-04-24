@@ -1,0 +1,13 @@
+{
+  "uuid": "436ceb28-a03c-47e0-b405-638ec1c2d639",
+  "name": "AQA_MTS_Graduate_Work.TestsUI.LoginTest",
+  "children": [
+    "39635496-2374-4dec-84c4-7331324cc931",
+    "9f9e273a-031d-4312-b2d0-980c987ca3cf"
+  ],
+  "befores": [],
+  "afters": [],
+  "links": [],
+  "start": 1713988562821,
+  "stop": 1713988588983
+}
