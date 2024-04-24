@@ -5,6 +5,7 @@ using NLog;
 
 namespace AQA_MTS_Graduate_Work.TestsApi;
 
+[Parallelizable(scope: ParallelScope.Fixtures)]
 [AllureNUnit]
 public class BaseApiTest
 {
