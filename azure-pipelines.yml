@@ -30,4 +30,9 @@ steps:
   displayName: Publish Report
   inputs:
     allureVersion: 2.27.0
-    testResultsDir: allure-results
+    testResultsDir: AQA_MTS_Graduate_Work\bin\Debug\net7.0\allure-results
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
