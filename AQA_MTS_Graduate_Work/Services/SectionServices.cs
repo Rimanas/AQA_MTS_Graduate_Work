@@ -7,10 +7,17 @@ namespace AQA_MTS_Graduate_Work.Services;
 public class SectionServices : ISectionServices, IDisposable
 {
     private readonly RestClientExtended _client;
-
     public SectionServices(RestClientExtended client)
     {
         _client = client;
+    }
+    public Task<Section> AddSection(string projectId, Section section)
+    {
+        var request = new RestRequest("index.php?/api/v2/add_section/{project_id}", Method.Post)
+            .AddUrlSegment("project_id", projectId)
+            .AddJsonBody(section);
+
+        return _client.ExecuteAsync<Section>(request);
     }
 
     public Task<Section> GetSection(string projectId)

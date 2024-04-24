@@ -53,6 +53,24 @@ namespace AQA_MTS_Graduate_Work.TestsApi
         }
 
         [Test]
+        [Order(1)]
+        public void AddSectionTest()
+        {
+            _section = Section.Generate();
+
+            var actualMilestone = MilestoneServices!.AddMilestone(_project.Id.ToString(), _milestone);
+            Assert.Multiple(() =>
+            {
+                Assert.That(actualMilestone.Result.Name, Is.EqualTo(_milestone.Name));
+                Assert.That(actualMilestone.Result.Description, Is.EqualTo(_milestone.Description));
+            });
+
+            _milestone = actualMilestone.Result;
+
+            _logger.Info(_milestone.ToString());
+        }
+
+        [Test]
         [Order(2)]
         public void GetProjectTest()
         {
