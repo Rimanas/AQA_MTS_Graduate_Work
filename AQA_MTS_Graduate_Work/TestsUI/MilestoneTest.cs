@@ -18,7 +18,7 @@ public class MilestoneTest : BaseTest
     {
         string expectedText = "Successfully added the new milestone.";
 
-        LoginSteps loginSteps = new LoginSteps(Driver);
+        LoginSteps loginSteps = new LoginSteps(Driver); //
         DashboardPage dashboardPage = loginSteps
             .SuccessfulLogin(Configurator.AppSettings.Username, Configurator.AppSettings.Password);
         Thread.Sleep(4000);
