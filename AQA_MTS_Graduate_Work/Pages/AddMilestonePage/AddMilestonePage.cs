@@ -11,6 +11,7 @@ namespace AQA_MTS_Graduate_Work.Pages.AddMilestonePage;
     private static readonly By InputFieldNameBy = By.Id("name");
     private static readonly By AddButtonBy = By.Id("accept");
     private static readonly By SuccessfullyAddMilestoneTextBy = By.CssSelector("[class='message message-success']");
+    private static readonly By ProjectLinkBy = By.LinkText("3project");
 
     // Инициализация класса
 
@@ -36,10 +37,12 @@ namespace AQA_MTS_Graduate_Work.Pages.AddMilestonePage;
     public IWebElement TitleLabel => WaitsHelper.WaitForExists(TitleLabelBy);
     public IWebElement InputFieldName => WaitsHelper.WaitForExists(InputFieldNameBy);
     public IWebElement SuccessfullyAddMilestoneText => WaitsHelper.WaitForExists(SuccessfullyAddMilestoneTextBy);
-
+    public IWebElement ProjectLink => WaitsHelper.WaitForExists(ProjectLinkBy);
 
     // Методы действий с элементами
     public void ClickAddButton() => AddButton.Click();
 
     public string GetSuccessAddMilestoneLabel() => SuccessfullyAddMilestoneText.Text.Trim();
+    public string GetProjectIdFromLink() => ProjectLink.GetAttribute("href").Substring(57);
+
 }

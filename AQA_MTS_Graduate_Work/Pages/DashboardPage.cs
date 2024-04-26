@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace AQA_MTS_Graduate_Work.Pages;
@@ -19,8 +20,10 @@ public class DashboardPage : BasePage
     private static readonly By NavigateBtnBy = By.CssSelector("[data-testid='navigationUser']");
     private static readonly By NavigateBtnTextBy = By.CssSelector("[data-testid='navigationUser']");
     private static readonly By AddProjectBtnBy = By.CssSelector("[class='sidebar-button']");
-    private static readonly By OpenProjectBtnBy = By.XPath("//*[@id='project-4']/div/div/*[@href=\"index.php?/projects/overview/4\"]");
+    //private static readonly By OpenProjectBtnBy = By.XPath("//*[@id='project-4']/div/div/*[@href='index.php?/projects/overview/4']");
+    private static readonly By OpenProjectButtonBy = By.LinkText("3project");
 
+    //WaitsHelper.WaitForVisibilityLocatedBy(By.LinkText("3project")).Click();
     // Инициализация класса
     public DashboardPage(IWebDriver driver) : base(driver)
     {
@@ -44,7 +47,7 @@ public class DashboardPage : BasePage
     public IWebElement NavigateBtn => WaitsHelper.WaitForExists(NavigateBtnBy);
     public IWebElement NavigateBtnText => WaitsHelper.WaitForExists(NavigateBtnTextBy);
     public IWebElement AddProjectBtn => WaitsHelper.WaitForExists(AddProjectBtnBy);
-    public IWebElement OpenProjectBtn => WaitsHelper.WaitForExists(OpenProjectBtnBy);
+    public IWebElement OpenProjectButton => WaitsHelper.WaitForExists(OpenProjectButtonBy);
 
     //Комплексные
 
@@ -67,7 +70,7 @@ public class DashboardPage : BasePage
     }
 
     public void ClickAddProjectBtn() => AddProjectBtn.Click();
-    public void ClickOpenProjectBtn() => OpenProjectBtn.Click();
+    public void ClickOpenProjectBtn() => OpenProjectButton.Click();
     public string TwitterText()
     {
         return IconTwitterText.GetAttribute("tooltip-text");
@@ -77,5 +80,13 @@ public class DashboardPage : BasePage
         return NavigateBtnText.Text;
     }
     public string GetNavigateBtnText() => NavigateBtnText.Text.Trim();
-    public string GetTwitterText() => IconTwitterText.GetAttribute("tooltip-text"); 
+    public string GetTwitterText() => IconTwitterText.GetAttribute("tooltip-text");
+    public string GetLinkOfProject() => OpenProjectButton.GetAttribute("href").Substring(57);
+
+    public string GetProjectId(string projectId)
+    {
+        Regex re = new Regex("https://aqa9001.testrail.io/index.php?/projects/overview/", RegexOptions.IgnoreCase);
+        projectId = re.Replace(projectId, ""); // удаляем c часть https://
+        return projectId;
+    }
 }

@@ -22,18 +22,27 @@ namespace AQA_MTS_Graduate_Work.Steps;
     [AllureStep]
     public MilestonesPage AddMilestone(Milestone _milestone)
     {
-        Thread.Sleep(4000);
+        Thread.Sleep(1000);
         AddMilestonePage = new AddMilestonePage(Driver, true);
         Thread.Sleep(1000);
         AddMilestonePage.InputFieldName.SendKeys(_milestone.Name);
         AddMilestonePage.ClickAddButton();
-        return new MilestonesPage(Driver);
-   
+        return new MilestonesPage(Driver);   
+    }
+    [AllureStep]
+    public string CheckDialogWindow()
+    {
+        MilestonesPage = new MilestonesPage(Driver, true);
+        Thread.Sleep(1000);
+        MilestonesPage.ClickCheckBoxSelectAll();
+        MilestonesPage.ClickDeleteMilestoneBtnAll();
+        return MilestonesPage.GetDialogWindowLabelText();
     }
     [AllureStep]
     public string DeleteMilestone()
     {
         MilestonesPage = new MilestonesPage(Driver, true);
+        Thread.Sleep(1000);
         MilestonesPage.ClickCheckBoxSelectAll();
         MilestonesPage.ClickDeleteMilestoneBtnAll();
         MilestonesPage.ClickDialWindConfirmCheckBox();
