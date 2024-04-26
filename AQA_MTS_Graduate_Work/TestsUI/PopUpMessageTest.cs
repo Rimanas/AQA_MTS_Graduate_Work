@@ -1,4 +1,5 @@
-﻿using AQA_MTS_Graduate_Work.Helpers.Configuration;
+﻿using Allure.NUnit.Attributes;
+using AQA_MTS_Graduate_Work.Helpers.Configuration;
 using AQA_MTS_Graduate_Work.Pages;
 using AQA_MTS_Graduate_Work.Steps;
 using OpenQA.Selenium;
@@ -8,7 +9,9 @@ namespace AQA_MTS_Graduate_Work.TestsUI;
 public class PopUpMessageTest : BaseTest
 {
     [Test]
-    [Description("Проверка Всплывающего Twitter сообщения")]
+    [AllureFeature("Positive UI Tests")]
+    [AllureDescription("Проверка Всплывающего Twitter сообщения")]
+    [AllureOwner("Qa A")]
 
     public void PopUpMessageIconTwitterTest()
     {
@@ -21,7 +24,9 @@ public class PopUpMessageTest : BaseTest
     }
 
     [Test]
-    [Description("Проверка Всплывающего 1 сообщения")]
+    [AllureFeature("Positive UI Tests")]
+    [AllureDescription("Проверка Всплывающего 1 сообщения")]
+    [AllureOwner("Qa A")]
 
     public void PopUpMessageNavigateTest()
     {

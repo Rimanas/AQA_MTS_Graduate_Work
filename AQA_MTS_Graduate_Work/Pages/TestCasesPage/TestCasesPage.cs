@@ -3,7 +3,7 @@ using AQA_MTS_Graduate_Work.Pages.AddTestcasePage;
 using OpenQA.Selenium;
 
 namespace AQA_MTS_Graduate_Work.Pages.TestCasesPage;
-    internal class TestCasesPage : TestCaseBasePage
+    internal class TestCasesPage : BasePage
 {
     private static string END_POINT = "index.php?/suites/view/4";
 

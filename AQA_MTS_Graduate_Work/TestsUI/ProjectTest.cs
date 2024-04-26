@@ -1,4 +1,5 @@
-﻿using AQA_MTS_Graduate_Work.Helpers.Configuration;
+﻿using Allure.NUnit.Attributes;
+using AQA_MTS_Graduate_Work.Helpers.Configuration;
 using AQA_MTS_Graduate_Work.Pages;
 using AQA_MTS_Graduate_Work.Pages.AddProjectPage;
 using AQA_MTS_Graduate_Work.Steps;
@@ -13,6 +14,7 @@ namespace AQA_MTS_Graduate_Work.TestsUI;
 {
 
     [Test]
+    [AllureFeature("Positive UI Tests")]
     [Description("Проверка Открытия страницы Добавления проекта")]
 
     public void AddProjectPageOpenTest()

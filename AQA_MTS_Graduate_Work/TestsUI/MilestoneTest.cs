@@ -10,16 +10,17 @@ using OpenQA.Selenium;
 namespace AQA_MTS_Graduate_Work.TestsUI;
 public class MilestoneTest : BaseTest
 {
-    
+
     [Test]
     [Order(1)]
-    [Description("Проверка Добавления Milestone")]
-    [AllureSubSuite("Successful Add Milestone Test")]
+    [AllureFeature("Positive UI Tests")]
+    [AllureDescription("Проверка Добавления Milestone")]
+    [AllureOwner("Qa A")]
     public void AddMilestoneTest()
     {
         string expectedText = "Successfully added the new milestone.";
 
-        LoginSteps loginSteps = new LoginSteps(Driver); 
+        LoginSteps loginSteps = new LoginSteps(Driver);
         DashboardPage dashboardPage = loginSteps
             .SuccessfulLogin(Configurator.AppSettings.Username, Configurator.AppSettings.Password);
 
@@ -27,6 +28,7 @@ public class MilestoneTest : BaseTest
         {
             //Name = "AutoMilestone",
             Name = dashboardPage.GetLinkOfProject(),
+            Description = dashboardPage.GetLinkOfProject(), 
         };
         var milestonesPage = _milestoneSteps.AddMilestone(expectedMilestone);
         string text = milestonesPage.GetSuccessAddMilestoneLabel();
@@ -35,23 +37,71 @@ public class MilestoneTest : BaseTest
 
     [Test]
     [Order(2)]
-    [Description("Проверка Диалогового окна при попытке удаления Milestone")]
-    [AllureSubSuite("Successful Dialog Window Test")]
+    [AllureFeature("Positive UI Tests")]
+    [AllureDescription("Проверка Добавления Milestone")]
+    [AllureOwner("Qa A")]
+    public void AddMilestoneWitnEmptyNameTest()
+    {
+        string expectedText = "Field Name is a required field.";
+
+        LoginSteps loginSteps = new LoginSteps(Driver);
+        DashboardPage dashboardPage = loginSteps
+            .SuccessfulLogin(Configurator.AppSettings.Username, Configurator.AppSettings.Password);
+
+        Milestone expectedMilestone = new Milestone()
+        {
+            Name = "",
+            Description = dashboardPage.GetLinkOfProject(), 
+        };
+        var milestonesPage = _milestoneSteps.AddMilestone(expectedMilestone);
+        string text = milestonesPage.GetErrorAddMilestoneLabel();
+        Assert.That(text, Is.EqualTo(expectedText));
+    }
+
+    [Test]
+    [Order(3)]
+    [AllureFeature("Negative UI Tests")]
+    [AllureDescription("Проверка Добавления Milestone с количеством символов в Наименовании, " +
+        "превышающих граниченое значение 250")]
+    [AllureOwner("Qa A")]
+    public void CheckMaxNameBoundaryTest()
+    {
+        string expectedText = "Successfully added the new milestone.";
+
+        LoginSteps loginSteps = new LoginSteps(Driver);
+        DashboardPage dashboardPage = loginSteps
+            .SuccessfulLogin(Configurator.AppSettings.Username, Configurator.AppSettings.Password);
+
+        Milestone milestoneMaxName = new Milestone()
+        {
+            Name = new string('A', 260),
+            Description = dashboardPage.GetLinkOfProject(), 
+        };
+        var expectedMilestoneName = _milestoneSteps.AddMilestone(milestoneMaxName).MilestoneName.Last().Text;
+        Assert.That(expectedMilestoneName, Is.EqualTo(milestoneMaxName.Name.Substring(0,250)));
+    }
+
+    [Test]
+    [Order(4)]
+    [AllureFeature("Positive UI Tests")]
+    [AllureDescription("Проверка Диалогового окна при попытке удаления Milestone")]
+    [AllureOwner("Qa A")]
     public void DialogWindowTest()
     {
         string expectedTextDialogWindow = "Confirmation";
-        LoginSteps loginSteps = new LoginSteps(Driver); 
+        LoginSteps loginSteps = new LoginSteps(Driver);
         DashboardPage dashboardPage = loginSteps
             .SuccessfulLogin(Configurator.AppSettings.Username, Configurator.AppSettings.Password);
-        
+
         Assert.That(_milestoneSteps.CheckDialogWindow(), Is.EqualTo(expectedTextDialogWindow));
         //Assert.That(milestonesPage.DialWindConfirmCheckBox.Displayed, Is.True);
     }
 
     [Test]
-    [Order(3)]
-    [Description("Проверка удаления Milestone")]
-    [AllureSubSuite("Successful Deelete Milestone Test")]
+    [Order(5)]
+    [AllureFeature("Positive UI Tests")]
+    [AllureDescription("Проверка удаления Milestone")]
+    [AllureOwner("Qa A")]
     public void DeleteMilestoneTest()
     {
         string deleteExpectedText = "Successfully deleted the milestone (s).";

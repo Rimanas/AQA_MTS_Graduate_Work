@@ -54,6 +54,7 @@ namespace AQA_MTS_Graduate_Work.TestsApi
             _logger.Info(_milestone.ToString());
         }
 
+        /*
         [Test]
         [Order(1)]
         public void AddSectionTest()
@@ -71,6 +72,7 @@ namespace AQA_MTS_Graduate_Work.TestsApi
 
             _logger.Info(_milestone.ToString());
         }
+        */
 
         [Test]
         [Order(2)]

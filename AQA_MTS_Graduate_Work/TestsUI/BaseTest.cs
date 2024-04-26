@@ -6,6 +6,7 @@ using OpenQA.Selenium;
 using Allure.NUnit;
 using Allure.Net.Commons;
 using System.Text;
+using AQA_MTS_Graduate_Work.Pages.AddtestCasePage;
 
 namespace AQA_MTS_Graduate_Work.TestsUI;
 [Parallelizable(scope: ParallelScope.Fixtures)]
@@ -20,6 +21,8 @@ public class BaseTest
     protected DashboardStep DashboardStep;
     protected ProjectSteps ProjectSteps;
     protected MilestoneSteps _milestoneSteps;
+    protected TestCaseSteps TestCaseSteps;
+
     [OneTimeSetUp]
     public static void GlobalSetup()
     {
@@ -36,6 +39,7 @@ public class BaseTest
         DashboardStep = new DashboardStep(Driver);
         ProjectSteps = new ProjectSteps(Driver);
         _milestoneSteps = new MilestoneSteps(Driver);
+        TestCaseSteps = new TestCaseSteps(Driver);
 
         Driver.Navigate().GoToUrl(Configurator.AppSettings.URL);
     }

@@ -26,6 +26,7 @@ namespace AQA_MTS_Graduate_Work.Steps;
         AddMilestonePage = new AddMilestonePage(Driver, true);
         Thread.Sleep(1000);
         AddMilestonePage.InputFieldName.SendKeys(_milestone.Name);
+        AddMilestonePage.InputFieldDescription.SendKeys(_milestone.Description);
         AddMilestonePage.ClickAddButton();
         return new MilestonesPage(Driver);   
     }

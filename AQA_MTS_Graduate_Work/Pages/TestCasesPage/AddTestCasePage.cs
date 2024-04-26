@@ -1,10 +1,8 @@
 ﻿using AQA_MTS_Graduate_Work.Helpers;
-using AQA_MTS_Graduate_Work.Pages.AddTestcasePage;
 using OpenQA.Selenium;
-using SeleniumExtras.WaitHelpers;
 
 namespace AQA_MTS_Graduate_Work.Pages.AddtestCasePage;
-    internal class AddTestCasePage : TestCaseBasePage
+    public class AddTestCasePage : BasePage
 {
     private static string END_POINT = "index.php?/cases/add/4";
 
@@ -17,6 +15,9 @@ namespace AQA_MTS_Graduate_Work.Pages.AddtestCasePage;
 
     // Инициализация класса
     public AddTestCasePage(IWebDriver driver) : base(driver)
+    {
+    }
+    public AddTestCasePage(IWebDriver driver, bool openPageByUrl) : base(driver, openPageByUrl)
     {
     }
 

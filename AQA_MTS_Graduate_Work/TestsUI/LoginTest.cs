@@ -7,7 +7,8 @@ namespace AQA_MTS_Graduate_Work.TestsUI;
 public class LoginTest : BaseTest
 {
     [Test]
-    [Description("Проверка успешного входа")]
+    [AllureFeature("Positive UI Tests")]
+    [AllureDescription("Проверка успешного входа")]
     public void SuccessfulLoginTest()
     {
         LoginSteps loginSteps = new LoginSteps(Driver);
@@ -17,8 +18,8 @@ public class LoginTest : BaseTest
         Assert.That(dashboardPage.IsPageOpened);
     }
     [Test]
-    [Description("Проверка Неуспешного входа, ввод некорректных данных")]
-    [AllureStep]
+    [AllureFeature("Negative UI Tests")]
+    [AllureDescription("Проверка Неуспешного входа, ввод некорректных данных")]
     public void InvalidUsernameLoginTest()
     {
         // Проверка в Builder стилистике
