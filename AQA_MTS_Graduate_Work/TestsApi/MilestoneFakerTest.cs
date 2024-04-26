@@ -13,8 +13,10 @@ namespace AQA_MTS_Graduate_Work.TestsApi
         private readonly Logger _logger = LogManager.GetCurrentClassLogger();
         private Project _project = null!;
         private Milestone _milestone = null!;
+        private Section _section = null!;
         private static Faker<Project> Project => new ProjectFaker();
         private static Faker<Milestone> Milestone => new MilestoneFaker();
+        private Faker<Section> Section => new SectionFaker();
 
         [OneTimeSetUp]
         [Description("Pre-Condition:create project")]

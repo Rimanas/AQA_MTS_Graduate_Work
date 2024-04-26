@@ -19,7 +19,7 @@ public class BaseTest
     protected LoginSteps LoginSteps;
     protected DashboardStep DashboardStep;
     protected ProjectSteps ProjectSteps;
-    protected MilestoneSteps MilestoneSteps;
+    protected MilestoneSteps _milestoneSteps;
     [OneTimeSetUp]
     public static void GlobalSetup()
     {
@@ -35,6 +35,7 @@ public class BaseTest
         LoginSteps = new LoginSteps(Driver);
         DashboardStep = new DashboardStep(Driver);
         ProjectSteps = new ProjectSteps(Driver);
+        _milestoneSteps = new MilestoneSteps(Driver);
 
         Driver.Navigate().GoToUrl(Configurator.AppSettings.URL);
     }

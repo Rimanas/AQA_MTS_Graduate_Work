@@ -6,5 +6,5 @@ public class Section
     [JsonPropertyName("id")] public int Id { get; set; }
     [JsonPropertyName("name")] public string? Name { get; init; }
     [JsonPropertyName("parent_id")] public int ParentId { get; set; }
-    [JsonPropertyName("description")] public int Description { get; set; }
+    [JsonPropertyName("description")] public string? Description { get; set; }
 }

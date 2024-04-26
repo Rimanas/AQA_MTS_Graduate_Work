@@ -1,25 +1,44 @@
 ﻿using Allure.NUnit.Attributes;
+using AQA_MTS_Graduate_Work.Helpers.Configuration;
+using AQA_MTS_Graduate_Work.Models;
+using AQA_MTS_Graduate_Work.Pages;
 using AQA_MTS_Graduate_Work.Pages.AddMilestonePage;
 using AQA_MTS_Graduate_Work.Pages.AddProjectPage;
 using OpenQA.Selenium;
 
 namespace AQA_MTS_Graduate_Work.Steps;
-    public class MilestoneSteps : BaseStep
+    public class MilestoneSteps(IWebDriver driver) : BaseStep(driver)
 {
-    private MilestonesPage _milestonesPage;
 
+    /*
     public MilestoneSteps(IWebDriver driver) : base(driver)
     {
         _milestonesPage = new MilestonesPage(Driver);
+        _addMilestonePage = new AddMilestonePage(Driver);   
+        _ownProjectPage = new OwnProjectPage(Driver);   
+    }
+    */
+
+    [AllureStep]
+    public MilestonesPage AddMilestone(Milestone _milestone)
+    {
+        Thread.Sleep(4000);
+        AddMilestonePage = new AddMilestonePage(Driver, true);
+        Thread.Sleep(1000);
+        AddMilestonePage.InputFieldName.SendKeys(_milestone.Name);
+        AddMilestonePage.ClickAddButton();
+        return new MilestonesPage(Driver);
+   
     }
     [AllureStep]
     public string DeleteMilestone()
     {
-        _milestonesPage.ClickCheckBoxSelectAll();
-        _milestonesPage.ClickDeleteMilestoneBtnAll();
-        _milestonesPage.ClickDialWindConfirmCheckBox();
-        _milestonesPage.ClickDialWindDeleteBtn();
+        MilestonesPage = new MilestonesPage(Driver, true);
+        MilestonesPage.ClickCheckBoxSelectAll();
+        MilestonesPage.ClickDeleteMilestoneBtnAll();
+        MilestonesPage.ClickDialWindConfirmCheckBox();
+        MilestonesPage.ClickDialWindDeleteBtn();
 
-        return _milestonesPage.GetSuccessfullDeleteMilestoneText();
+        return MilestonesPage.GetSuccessfullDeleteMilestoneText();
     }  
 }
