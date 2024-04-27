@@ -5,13 +5,14 @@ using NLog;
 
 namespace AQA_MTS_Graduate_Work.TestsApi;
 
-[Parallelizable(scope: ParallelScope.Fixtures)]
+//[Parallelizable(scope: ParallelScope.Fixtures)]
 [AllureNUnit]
 public class BaseApiTest
 {
     private readonly Logger _logger = LogManager.GetCurrentClassLogger();
     protected ProjectServices? ProjectServices;
     protected MilestoneServices? MilestoneServices;
+    protected SectionServices? SectionServices;
 
     [OneTimeSetUp]
     public void SetUpApi()
@@ -19,6 +20,7 @@ public class BaseApiTest
         var restClient = new RestClientExtended();
         ProjectServices = new ProjectServices(restClient);
         MilestoneServices = new MilestoneServices(restClient);
+        SectionServices = new SectionServices(restClient);
     }
 
     [OneTimeTearDown]
@@ -26,5 +28,6 @@ public class BaseApiTest
     {
         ProjectServices.Dispose();
         MilestoneServices.Dispose();
+        SectionServices?.Dispose();
     }
 }

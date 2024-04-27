@@ -57,11 +57,13 @@ public class BaseTest
                 AllureApi.AddAttachment("Screenshot", "image/png", screenshotBytes);
                 AllureApi.AddAttachment("error.txt", "text/plain", Encoding.UTF8.GetBytes(TestContext.CurrentContext.Result.Message));
             }
-        }
-
-        finally
+       }
+        catch (Exception e)
         {
-            Driver.Quit();
+            Console.WriteLine(e);
+            throw;
         }
+        Driver.Quit();
+
     }
 }

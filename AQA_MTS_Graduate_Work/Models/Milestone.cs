@@ -1,4 +1,5 @@
-﻿using System.Text.Json.Serialization;
+﻿using System.Net;
+using System.Text.Json.Serialization;
 
 namespace AQA_MTS_Graduate_Work.Models
 {
@@ -15,6 +16,8 @@ namespace AQA_MTS_Graduate_Work.Models
         //[JsonPropertyName("parent_id")] public int ParentId { get; set; }
         [JsonPropertyName("project_id")] public int ProjectId { get; set; }
         [JsonPropertyName("refs")] public string Refs { get; set; }
+        public HttpStatusCode StatusCode { get; internal set; }
+        [JsonPropertyName("error")] public string? Error { get; set; }
         //[JsonPropertyName("start_on")] public DateTime StartOn { get; set; }
         //[JsonPropertyName("started_on")] public DateTime StartedOn { get; set; }
         //[JsonPropertyName("url")] public string URL { get; set; }

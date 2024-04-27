@@ -14,4 +14,5 @@ public class Project
     [JsonPropertyName("url")] public string? Url { get; set; }
     [JsonPropertyName("users")] public List<User> Users { get; set; } = new();
     [JsonPropertyName("groups")] public List<Group> Groups { get; set; } = new();
+    [JsonPropertyName("error")] public string? Error { get; set; }
 }
