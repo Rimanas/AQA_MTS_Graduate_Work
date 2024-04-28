@@ -6,7 +6,7 @@ namespace AQA_MTS_Graduate_Work.Fakers;
 {
     public SectionFaker()
     {
-        RuleFor(b => b.Name, f => f.Random.AlphaNumeric(20));
-        RuleFor(b => b.Description, f => f.Random.Words(10));
+        RuleFor(b => b.Name, f => f.Random.AlphaNumeric(5));
+        RuleFor(b => b.Description, f => f.Random.Words(1));
     }
 }

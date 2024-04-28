@@ -48,8 +48,8 @@ namespace AQA_MTS_Graduate_Work.TestsApi
         {
             _milestone = Milestone.Generate();
 
-            //var actualMilestone = MilestoneServices!.AddMilestone(_project.Id.ToString(), _milestone);
-            var actualMilestone = MilestoneServices!.AddMilestone("7", _milestone);
+            var actualMilestone = MilestoneServices!.AddMilestone(_project.Id.ToString(), _milestone);
+            //var actualMilestone = MilestoneServices!.AddMilestone("7", _milestone);
             Assert.Multiple(() =>
             {
                 Assert.That(actualMilestone.Result.Name, Is.EqualTo(_milestone.Name));
@@ -71,8 +71,8 @@ namespace AQA_MTS_Graduate_Work.TestsApi
         {
             _section = Section.Generate();
 
-            //var actualSection = SectionServices!.AddSection(_project.Id.ToString(), _section);
-            var actualSection = SectionServices!.AddSection("7", _section);
+            var actualSection = SectionServices!.AddSection(_project.Id.ToString(), _section);
+            //var actualSection = SectionServices!.AddSection("7", _section);
             Assert.Multiple(() =>
             {
                 Assert.That(actualSection.Result.Name, Is.EqualTo(_section.Name));
@@ -132,12 +132,12 @@ namespace AQA_MTS_Graduate_Work.TestsApi
         [AllureOwner("Qa A")]
         public void GetSectionTest()
         {
-            var actualSection = SectionServices!.GetSection(_project.Id.ToString());
+            var actualSection = SectionServices!.GetSection(_section.Id.ToString());
 
             Assert.Multiple(() =>
             {
-                Assert.That(actualSection.Result.Name, Is.EqualTo(_milestone.Name));
-                Assert.That(actualSection.Result.Description, Is.EqualTo(_milestone.Description));
+                Assert.That(actualSection.Result.Name, Is.EqualTo(_section.Name));
+                Assert.That(actualSection.Result.Description, Is.EqualTo(_section.Description));
             });
 
             _logger.Info(actualSection.Result.ToString());

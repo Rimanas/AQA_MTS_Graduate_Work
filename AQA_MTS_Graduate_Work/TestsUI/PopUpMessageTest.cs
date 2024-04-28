@@ -6,6 +6,8 @@ using OpenQA.Selenium;
 using static System.Net.Mime.MediaTypeNames;
 
 namespace AQA_MTS_Graduate_Work.TestsUI;
+
+[AllureSuite("UI Tests")]
 public class PopUpMessageTest : BaseTest
 {
     [Test]

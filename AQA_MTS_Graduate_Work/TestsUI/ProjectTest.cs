@@ -10,7 +10,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace AQA_MTS_Graduate_Work.TestsUI;
-    public class ProjectTest : BaseTest
+
+[AllureSuite("UI Tests")]
+public class ProjectTest : BaseTest
 {
 
     [Test]

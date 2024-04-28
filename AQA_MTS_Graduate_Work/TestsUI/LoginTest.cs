@@ -4,6 +4,8 @@ using AQA_MTS_Graduate_Work.Pages;
 using AQA_MTS_Graduate_Work.Steps;
 
 namespace AQA_MTS_Graduate_Work.TestsUI;
+
+[AllureSuite("UI Tests")]
 public class LoginTest : BaseTest
 {
     [Test]

@@ -8,6 +8,8 @@ using AQA_MTS_Graduate_Work.Models;
 using OpenQA.Selenium;
 
 namespace AQA_MTS_Graduate_Work.TestsUI;
+
+[AllureSuite("UI Tests")]
 public class MilestoneTest : BaseTest
 {
 

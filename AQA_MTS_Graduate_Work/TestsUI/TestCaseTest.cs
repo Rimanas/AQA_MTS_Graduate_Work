@@ -4,6 +4,8 @@ using AQA_MTS_Graduate_Work.Steps;
 using Allure.NUnit.Attributes;
 
 namespace AQA_MTS_Graduate_Work.TestsUI;
+
+[AllureSuite("UI Tests")]
 internal class TestCaseTest : BaseTest
 {
 

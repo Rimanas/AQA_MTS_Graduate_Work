@@ -20,10 +20,10 @@ public class SectionServices : ISectionServices, IDisposable
         return _client.ExecuteAsync<Section>(request);
     }
 
-    public Task<Section> GetSection(string projectId)
+    public Task<Section> GetSection(string sectionId)
     {
         var request = new RestRequest("index.php?/api/v2/get_section/{section_id}")
-            .AddUrlSegment("project_id", projectId);
+            .AddUrlSegment("section_id", sectionId);
 
         return _client.ExecuteAsync<Section>(request);
     }
