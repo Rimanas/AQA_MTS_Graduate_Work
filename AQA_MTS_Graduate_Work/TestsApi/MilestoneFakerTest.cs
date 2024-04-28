@@ -78,8 +78,9 @@ namespace AQA_MTS_Graduate_Work.TestsApi
             //var actualSection = SectionServices!.AddSection("7", _section);
             Assert.Multiple(() =>
             {
+                //Assert.That(actualSection.Result.SuitId, Is.EqualTo(_section.SuitId));
                 Assert.That(actualSection.Result.Name, Is.EqualTo(_section.Name));
-                Assert.That(actualSection.Result.Description, Is.EqualTo(_section.Description));
+                Assert.That(actualSection.Result.Description, Is.EqualTo(_section.Description));                
             });
 
             _section = actualSection.Result;

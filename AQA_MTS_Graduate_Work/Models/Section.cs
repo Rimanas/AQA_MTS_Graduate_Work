@@ -9,4 +9,6 @@ public class Section
     //[JsonPropertyName("suite_id")] public int SuitId { get; set; }
     [JsonPropertyName("name")] public string? Name { get; init; }
     [JsonPropertyName("description")] public string? Description { get; set; }
+    [JsonPropertyName("display_order")] public int? DisplayOrder { get; set; }
+    [JsonPropertyName("depth")] public int? Depth { get; set; }
 }
