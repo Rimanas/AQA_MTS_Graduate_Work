@@ -1,4 +1,5 @@
-﻿using AQA_MTS_Graduate_Work.Clients;
+﻿using Allure.NUnit.Attributes;
+using AQA_MTS_Graduate_Work.Clients;
 using AQA_MTS_Graduate_Work.Models;
 using RestSharp;
 using System.Net;
@@ -20,6 +21,7 @@ public class SectionServices : ISectionServices, IDisposable
         return _client.ExecuteAsync<Section>(request);
     }
 
+    [AllureStep("Get Section By Id")]
     public Task<Section> GetSection(string sectionId)
     {
         var request = new RestRequest("index.php?/api/v2/get_section/{section_id}")

@@ -39,8 +39,8 @@ public class MilestoneTest : BaseTest
 
     [Test]
     [Order(2)]
-    [AllureFeature("Positive UI Tests")]
-    [AllureDescription("Проверка Добавления Milestone")]
+    [AllureFeature("Negative UI Tests")]
+    [AllureDescription("Проверка Добавления Milestone с пустым Именем")]
     [AllureOwner("Qa A")]
     public void AddMilestoneWitnEmptyNameTest()
     {

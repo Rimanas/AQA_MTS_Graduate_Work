@@ -20,6 +20,13 @@ public class MilestoneServices : IMilestoneServices, IDisposable
 
         return _client.ExecuteAsync<Milestone>(request);
     }
+    public Task<RestResponse> GetMilestoneResponse(string milestoneId)
+    {
+        var request = new RestRequest("index.php?/api/v2/get_milestone/{milestone_id}")
+            .AddUrlSegment("milestone_id", milestoneId);
+
+        return _client.ExecuteAsync(request);
+    }
     public Task<Milestones> GetMilestones(string projectId)
     {
         var request = new RestRequest("index.php?/api/v2/get_milestones/{project_id}")

@@ -606,6 +606,22 @@
           }
         }
       },
+      "Newtonsoft.Json.Schema/3.0.16-beta2": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.Schema.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.Schema.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "NLog/5.2.8": {
         "type": "package",
         "compile": {
@@ -1720,6 +1736,29 @@
         "packageIcon.png"
       ]
     },
+    "Newtonsoft.Json.Schema/3.0.16-beta2": {
+      "sha512": "q3qiGsUieO3BKPIGRq2gqcQfj2ou3hhHNpEV540D+TyQD0hGEWhl08xQCfJBCa/RqDK43xEi8HEeiPTVZ7Qbiw==",
+      "type": "package",
+      "path": "newtonsoft.json.schema/3.0.16-beta2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "lib/net35/Newtonsoft.Json.Schema.dll",
+        "lib/net35/Newtonsoft.Json.Schema.xml",
+        "lib/net40/Newtonsoft.Json.Schema.dll",
+        "lib/net40/Newtonsoft.Json.Schema.xml",
+        "lib/net45/Newtonsoft.Json.Schema.dll",
+        "lib/net45/Newtonsoft.Json.Schema.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.Schema.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.Schema.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.Schema.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.Schema.xml",
+        "newtonsoft.json.schema.3.0.16-beta2.nupkg.sha512",
+        "newtonsoft.json.schema.nuspec",
+        "packageIcon.png"
+      ]
+    },
     "NLog/5.2.8": {
       "sha512": "jAIELkWBs1CXFPp986KSGpDFQZHCFccO+LMbKBTTNm42KifaI1mYzFMFQQfuGmGMTrCx0TFPhDjHDE4cLAZWiQ==",
       "type": "package",
@@ -2371,6 +2410,7 @@
       "NUnit >= 4.1.0",
       "NUnit.Analyzers >= 4.1.0",
       "NUnit3TestAdapter >= 4.5.0",
+      "Newtonsoft.Json.Schema >= 3.0.16-beta2",
       "RestSharp >= 110.2.1-alpha.0.20",
       "Selenium.WebDriver >= 4.19.0",
       "SeleniumExtras.WaitHelpers >= 1.0.2",
@@ -2467,6 +2507,10 @@
           "NUnit3TestAdapter": {
             "target": "Package",
             "version": "[4.5.0, )"
+          },
+          "Newtonsoft.Json.Schema": {
+            "target": "Package",
+            "version": "[3.0.16-beta2, )"
           },
           "RestSharp": {
             "target": "Package",

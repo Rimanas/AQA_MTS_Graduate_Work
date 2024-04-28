@@ -90,6 +90,10 @@
               "target": "Package",
               "version": "[4.5.0, )"
             },
+            "Newtonsoft.Json.Schema": {
+              "target": "Package",
+              "version": "[3.0.16-beta2, )"
+            },
             "RestSharp": {
               "target": "Package",
               "version": "[110.2.1-alpha.0.20, )"
