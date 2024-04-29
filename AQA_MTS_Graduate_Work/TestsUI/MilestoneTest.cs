@@ -26,13 +26,18 @@ public class MilestoneTest : BaseTest
         DashboardPage dashboardPage = loginSteps
             .SuccessfulLogin(Configurator.AppSettings.Username, Configurator.AppSettings.Password);
 
+        MilestoneBuilder expectedMilestone = new MilestoneBuilder.Builder()
+            .SetMilestoneName("BuilderMilestone")
+            .SetDescription("Builder")
+            .Build();
+        /*
         Milestone expectedMilestone = new Milestone()
         {
             Name = "AutoMilestone",
-            //Name = dashboardPage.GetLinkOfProject(),
             Description = "Description", 
         };
-        var milestonesPage = _milestoneSteps.AddMilestone(expectedMilestone);
+        */
+        var milestonesPage = _milestoneSteps.AddMilestoneBuilder(expectedMilestone);
         string text = milestonesPage.GetSuccessAddMilestoneLabel();
         Assert.That(text, Is.EqualTo(expectedText));
     }
