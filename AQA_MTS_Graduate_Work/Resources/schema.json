@@ -1,0 +1,55 @@
+﻿{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer"
+        },
+        "name": {
+            "type": "string"
+        },
+        "description": {
+            "type": "string"
+        },
+        "start_on": {
+            "type": "null"
+        },
+        "started_on": {
+            "type": "integer"
+        },
+        "is_started": {
+            "type": "boolean"
+        },
+        "due_on": {
+            "type": "null"
+        },
+        "is_completed": {
+            "type": "boolean"
+        },
+        "completed_on": {
+            "type": "null"
+        },
+        "project_id": {
+            "type": "integer"
+        },
+        "parent_id": {
+            "type": "null"
+        },
+        "refs": {
+            "type": "null"
+        },
+        "url": {
+            "type": "string"
+        },
+        "milestones": {
+            "type": "array",
+            "items": {}
+        }
+    },
+    "required": [
+        "id",
+        "name",
+        "description",
+        "project_id"
+    ]
+}

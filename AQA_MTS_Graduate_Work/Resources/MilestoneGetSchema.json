@@ -1,0 +1,16 @@
+﻿{
+    "id": 1,
+    "name": "First Milestone",
+    "description": "First Milestone",
+    "start_on": 1713312000,
+    "started_on": null,
+    "is_started": false,
+    "due_on": 1714435200,
+    "is_completed": false,
+    "completed_on": null,
+    "project_id": 1,
+    "parent_id": null,
+    "refs": "1",
+    "url": "https://aqa9001.testrail.io/index.php?/milestones/view/1",
+    "milestones": []
+}
