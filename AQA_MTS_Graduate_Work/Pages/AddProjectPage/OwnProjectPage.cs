@@ -11,6 +11,7 @@ namespace AQA_MTS_Graduate_Work.Pages.AddProjectPage;
     private static readonly By MilestonesButtonBy = By.Id("navigation-milestones");
     private static readonly By TestCaseButtonBy = By.Id("navigation-suites");
     // Инициализация класса
+
     public OwnProjectPage(IWebDriver driver) : base(driver)
     {
     }

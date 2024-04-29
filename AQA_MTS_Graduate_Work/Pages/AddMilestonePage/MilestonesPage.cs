@@ -2,12 +2,13 @@
 using OpenQA.Selenium;
 
 namespace AQA_MTS_Graduate_Work.Pages.AddMilestonePage;
-   public class MilestonesPage : MilestoneBasePage
+public class MilestonesPage: BasePage
 {
     private static string END_POINT = "index.php?/milestones/overview/4";
 
     //Описание элементов
     private static readonly By TitleLabelBy = By.ClassName("page_title");
+    private static readonly By AddMilestoneButtonBy = By.Id("navigation-overview-addmilestones");
     private static readonly By SuccessfullyAddMilestoneTextBy = By.CssSelector("[class='message message-success']");
     private static readonly By CheckBoxSelectAllBy = By.CssSelector("#active [name='select_all']");
     private static readonly By DeleteMilestoneBtnBy = By.CssSelector("[class='button button-negative button-delete']");
@@ -16,8 +17,14 @@ namespace AQA_MTS_Graduate_Work.Pages.AddMilestonePage;
     private static readonly By DialWindDeleteBtnBy = By.CssSelector("[data-testid='deleteCaseDialogActionDefault']");
     private static readonly By SuccessfullDeleteMilestoneTextBy = By.CssSelector("[class='message message-success']");
     // Инициализация класса
+
     public MilestonesPage(IWebDriver driver) : base(driver)
     {
+    }
+
+    public MilestonesPage(IWebDriver driver, bool openPageByUrl) : base(driver, openPageByUrl)
+    {
+
     }
 
     protected override string GetEndpoint()

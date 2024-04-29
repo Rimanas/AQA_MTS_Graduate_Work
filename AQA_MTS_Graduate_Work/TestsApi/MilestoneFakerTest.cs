@@ -13,8 +13,10 @@ namespace AQA_MTS_Graduate_Work.TestsApi
         private readonly Logger _logger = LogManager.GetCurrentClassLogger();
         private Project _project = null!;
         private Milestone _milestone = null!;
+        private Section _section = null!;
         private static Faker<Project> Project => new ProjectFaker();
         private static Faker<Milestone> Milestone => new MilestoneFaker();
+        private Faker<Section> Section => new SectionFaker();
 
         [OneTimeSetUp]
         [Description("Pre-Condition:create project")]
@@ -53,6 +55,24 @@ namespace AQA_MTS_Graduate_Work.TestsApi
         }
 
         [Test]
+        [Order(1)]
+        public void AddSectionTest()
+        {
+            _section = Section.Generate();
+
+            var actualMilestone = MilestoneServices!.AddMilestone(_project.Id.ToString(), _milestone);
+            Assert.Multiple(() =>
+            {
+                Assert.That(actualMilestone.Result.Name, Is.EqualTo(_milestone.Name));
+                Assert.That(actualMilestone.Result.Description, Is.EqualTo(_milestone.Description));
+            });
+
+            _milestone = actualMilestone.Result;
+
+            _logger.Info(_milestone.ToString());
+        }
+
+        [Test]
         [Order(2)]
         public void GetProjectTest()
         {
@@ -70,7 +90,7 @@ namespace AQA_MTS_Graduate_Work.TestsApi
         }
 
         [Test]
-        [Order(2)]
+        [Order(3)]
         public void GetMilestoneTest()
         {
             var actualMilestone = MilestoneServices!.GetMilestone(_milestone.ID.ToString());
@@ -85,7 +105,7 @@ namespace AQA_MTS_Graduate_Work.TestsApi
         }
 
         [Test]
-        [Order(3)]
+        [Order(4)]
         public void UpdateMilestoneTest()
         {
             Milestone milestoneUpdate = new Milestone
@@ -103,7 +123,7 @@ namespace AQA_MTS_Graduate_Work.TestsApi
         }
 
         [Test]
-        [Order(4)]
+        [Order(5)]
         public void DeleteMilestoneTest()
         {
             var actualMilestone = MilestoneServices!.DeleteMilestone(_milestone.ID.ToString());

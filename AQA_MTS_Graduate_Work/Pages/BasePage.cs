@@ -7,12 +7,13 @@ public abstract class BasePage
 {
     protected IWebDriver Driver { get; private set; }         // свойство - драйвер
     protected WaitsHelper WaitsHelper { get; private set; }      // свойство - ожидание
-
+    /*
     public BasePage(IWebDriver driver)
     {
         Driver = driver;
         WaitsHelper = new WaitsHelper(Driver, TimeSpan.FromSeconds(Configurator.WaitsTimeout));
     }
+    */
 
     public BasePage(IWebDriver driver, bool openPageByUrl)  // флаг -bool openPageByUrl
     {
@@ -23,6 +24,9 @@ public abstract class BasePage
         {
             OpenPageByURL();
         }
+    }
+    public BasePage(IWebDriver driver) : this(driver, false)
+    {
     }
 
     protected abstract string GetEndpoint();  //  каждая страница долдна выполнить это

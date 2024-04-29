@@ -4,6 +4,7 @@ using AQA_MTS_Graduate_Work.Steps;
 using AQA_MTS_Graduate_Work.Pages.AddMilestonePage;
 using AQA_MTS_Graduate_Work.Pages.AddProjectPage;
 using Allure.NUnit.Attributes;
+using AQA_MTS_Graduate_Work.Models;
 
 namespace AQA_MTS_Graduate_Work.TestsUI;
 public class MilestoneTest : BaseTest
@@ -16,17 +17,17 @@ public class MilestoneTest : BaseTest
     public void AddMilestoneTest()
     {
         string expectedText = "Successfully added the new milestone.";
-        AddMilestonePage addMilestonePage = new AddMilestonePage(Driver);
-        OwnProjectPage ownProjectPage = new OwnProjectPage(Driver);
-        MilestonesPage milestonesPage = new MilestonesPage(Driver);
+
         LoginSteps loginSteps = new LoginSteps(Driver);
         DashboardPage dashboardPage = loginSteps
             .SuccessfulLogin(Configurator.AppSettings.Username, Configurator.AppSettings.Password);
-        dashboardPage.ClickOpenProjectBtn();
-        ownProjectPage.ClickAddMilestoneButton();
-        addMilestonePage.InputFieldName.SendKeys("AutoMilestone");
-        addMilestonePage.ClickAddButton();
-        //Assert.That(addMilestonePage.IsPageOpened);
+        Thread.Sleep(4000);
+
+        Milestone expectedMilestone = new Milestone()
+        {
+            Name = "AutoMilestone",
+        };
+        var milestonesPage = _milestoneSteps.AddMilestone(expectedMilestone);
         Assert.That(milestonesPage.GetSuccessAddMilestoneLabel, Is.EqualTo(expectedText));
     }
 
