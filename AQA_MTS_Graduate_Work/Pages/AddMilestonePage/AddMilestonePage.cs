@@ -1,4 +1,5 @@
-﻿using AQA_MTS_Graduate_Work.Helpers;
+﻿using AQA_MTS_Graduate_Work.Elements;
+using AQA_MTS_Graduate_Work.Helpers;
 using OpenQA.Selenium;
 
 namespace AQA_MTS_Graduate_Work.Pages.AddMilestonePage;
@@ -34,9 +35,9 @@ namespace AQA_MTS_Graduate_Work.Pages.AddMilestonePage;
     }
 
     // Методы поиска элементов
-    public IWebElement AddButton => WaitsHelper.WaitForExists(AddButtonBy);
-    public IWebElement TitleLabel => WaitsHelper.WaitForExists(TitleLabelBy);
-    public IWebElement InputFieldName => WaitsHelper.WaitForExists(InputFieldNameBy);
+    public Button AddButton => new(Driver, AddButtonBy);
+    public UIElement TitleLabel => new(Driver, TitleLabelBy);
+    public UIElement InputFieldName => new(Driver, InputFieldNameBy);
     public IWebElement InputFieldDescription => WaitsHelper.WaitForExists(InputFieldDescriptionBy);
     public IWebElement SuccessfullyAddMilestoneText => WaitsHelper.WaitForExists(SuccessfullyAddMilestoneTextBy);
     public IWebElement ProjectLink => WaitsHelper.WaitForExists(ProjectLinkBy);

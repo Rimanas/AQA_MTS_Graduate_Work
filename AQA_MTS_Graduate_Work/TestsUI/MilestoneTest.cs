@@ -28,9 +28,9 @@ public class MilestoneTest : BaseTest
 
         Milestone expectedMilestone = new Milestone()
         {
-            //Name = "AutoMilestone",
-            Name = dashboardPage.GetLinkOfProject(),
-            Description = dashboardPage.GetLinkOfProject(), 
+            Name = "AutoMilestone",
+            //Name = dashboardPage.GetLinkOfProject(),
+            Description = "Description", 
         };
         var milestonesPage = _milestoneSteps.AddMilestone(expectedMilestone);
         string text = milestonesPage.GetSuccessAddMilestoneLabel();
@@ -53,7 +53,7 @@ public class MilestoneTest : BaseTest
         Milestone expectedMilestone = new Milestone()
         {
             Name = "",
-            Description = dashboardPage.GetLinkOfProject(), 
+            Description = "Description", 
         };
         var milestonesPage = _milestoneSteps.AddMilestone(expectedMilestone);
         string text = milestonesPage.GetErrorAddMilestoneLabel();
@@ -77,7 +77,7 @@ public class MilestoneTest : BaseTest
         Milestone milestoneMaxName = new Milestone()
         {
             Name = new string('A', 260),
-            Description = dashboardPage.GetLinkOfProject(), 
+            Description = "Description", 
         };
         var expectedMilestoneName = _milestoneSteps.AddMilestone(milestoneMaxName).MilestoneName.Last().Text;
         Assert.That(expectedMilestoneName, Is.EqualTo(milestoneMaxName.Name.Substring(0,250)));

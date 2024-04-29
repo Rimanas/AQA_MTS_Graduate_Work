@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using AQA_MTS_Graduate_Work.Elements;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
 using System.Text.RegularExpressions;
 
@@ -41,8 +42,8 @@ public class DashboardPage : BasePage
     public IWebElement IconTwitterText => WaitsHelper.WaitForExists(IconTwitterTextBy);
     public IWebElement NavigateBtn => WaitsHelper.WaitForExists(NavigateBtnBy);
     public IWebElement NavigateBtnText => WaitsHelper.WaitForExists(NavigateBtnTextBy);
-    public IWebElement AddProjectBtn => WaitsHelper.WaitForExists(AddProjectBtnBy);
-    public IWebElement OpenProjectButton => WaitsHelper.WaitForExists(OpenProjectButtonBy);
+    public Button AddProjectBtn => new(Driver, AddProjectBtnBy);
+    public Button OpenProjectButton => new(Driver, OpenProjectButtonBy);
 
     //Комплексные
 
@@ -76,7 +77,7 @@ public class DashboardPage : BasePage
     }
     public string GetNavigateBtnText() => NavigateBtnText.Text.Trim();
     public string GetTwitterText() => IconTwitterText.GetAttribute("tooltip-text");
-    public string GetLinkOfProject() => OpenProjectButton.GetAttribute("href").Substring(57);
+    //public string GetLinkOfProject() => OpenProjectButton.GetAttribute("href").Substring(57);
 
     public string GetProjectId(string projectId)
     {
