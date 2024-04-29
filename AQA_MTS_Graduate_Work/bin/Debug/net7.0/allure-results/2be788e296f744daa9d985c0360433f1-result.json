@@ -1,0 +1,106 @@
+{
+  "uuid": "2d3fa1ee-f147-4191-9154-ca5c6ceb77c9",
+  "historyId": "0ebfa5a55643b8541f2a2332cbe6872b",
+  "testCaseId": "70d3c1c01b1d512b595183b4bf33ccb7",
+  "fullName": "AQA_MTS_Graduate_Work:AQA_MTS_Graduate_Work.TestsUI.MilestoneTest.AddMilestoneWitnEmptyNameTest()",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#6"
+    },
+    {
+      "name": "host",
+      "value": "LAPTOP-5N040E8C"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "NUnit 3"
+    },
+    {
+      "name": "package",
+      "value": "AQA_MTS_Graduate_Work.TestsUI"
+    },
+    {
+      "name": "testMethod",
+      "value": "AddMilestoneWitnEmptyNameTest"
+    },
+    {
+      "name": "testClass",
+      "value": "MilestoneTest"
+    },
+    {
+      "name": "feature",
+      "value": "Negative UI Tests"
+    },
+    {
+      "name": "owner",
+      "value": "Qa A"
+    },
+    {
+      "name": "suite",
+      "value": "UI Tests"
+    }
+  ],
+  "links": [],
+  "name": "AddMilestoneWitnEmptyNameTest",
+  "status": "passed",
+  "stage": "finished",
+  "description": "Проверка Добавления Milestone с пустым Именем",
+  "steps": [
+    {
+      "name": "SuccessfulLogin",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "username",
+          "value": "\"rimanas_alina@mail.ru\"",
+          "excluded": false
+        },
+        {
+          "name": "password",
+          "value": "\"Qwerty11@\"",
+          "excluded": false
+        }
+      ],
+      "start": 1714426911108,
+      "stop": 1714426912672
+    },
+    {
+      "name": "AddMilestone",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "_milestone",
+          "value": "{\"Name\":\"\",\"Description\":\"Description\",\"ID\":0,\"ProjectId\":0,\"Refs\":null,\"StatusCode\":0,\"Error\":null}",
+          "excluded": false
+        }
+      ],
+      "start": 1714426912681,
+      "stop": 1714426915791
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1714426904415,
+  "stop": 1714426915986
+}

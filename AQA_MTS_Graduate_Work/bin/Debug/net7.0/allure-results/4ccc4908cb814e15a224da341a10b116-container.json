@@ -1,0 +1,12 @@
+{
+  "uuid": "e1f0f9ce-3d5c-4d01-9d5b-c1e665538bdb",
+  "name": "AQA_MTS_Graduate_Work.TestsUI.MilestoneTest.DialogWindowTest",
+  "children": [
+    "057dc5a4-700d-4d92-b384-d771c04e2b6a"
+  ],
+  "befores": [],
+  "afters": [],
+  "links": [],
+  "start": 1714426928640,
+  "stop": 1714426938197
+}

@@ -1,0 +1,100 @@
+{
+  "uuid": "17fcabce-7383-4aad-ab20-163fd393ac7e",
+  "historyId": "2ad0927838699baf33dd90a3acd5a3b0",
+  "testCaseId": "21a9d246eed397a74e3afc5492d72edd",
+  "fullName": "AQA_MTS_Graduate_Work:AQA_MTS_Graduate_Work.TestsUI.MilestoneTest.DeleteMilestoneTest()",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#6"
+    },
+    {
+      "name": "host",
+      "value": "LAPTOP-5N040E8C"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "NUnit 3"
+    },
+    {
+      "name": "package",
+      "value": "AQA_MTS_Graduate_Work.TestsUI"
+    },
+    {
+      "name": "testMethod",
+      "value": "DeleteMilestoneTest"
+    },
+    {
+      "name": "testClass",
+      "value": "MilestoneTest"
+    },
+    {
+      "name": "feature",
+      "value": "Positive UI Tests"
+    },
+    {
+      "name": "owner",
+      "value": "Qa A"
+    },
+    {
+      "name": "suite",
+      "value": "UI Tests"
+    }
+  ],
+  "links": [],
+  "name": "DeleteMilestoneTest",
+  "status": "passed",
+  "stage": "finished",
+  "description": "Проверка удаления Milestone",
+  "steps": [
+    {
+      "name": "SuccessfulLogin",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "username",
+          "value": "\"rimanas_alina@mail.ru\"",
+          "excluded": false
+        },
+        {
+          "name": "password",
+          "value": "\"Qwerty11@\"",
+          "excluded": false
+        }
+      ],
+      "start": 1714426944602,
+      "stop": 1714426946273
+    },
+    {
+      "name": "DeleteMilestone",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1714426946274,
+      "stop": 1714426949027
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1714426938198,
+  "stop": 1714426949194
+}

@@ -1,0 +1,106 @@
+{
+  "uuid": "f86ec69f-722e-4f75-8acf-b3171d70d830",
+  "historyId": "b3797649b2f1203d24078f546e6558bc",
+  "testCaseId": "b85d94e26e69b2868fb917defcf4c9f8",
+  "fullName": "AQA_MTS_Graduate_Work:AQA_MTS_Graduate_Work.TestsUI.MilestoneTest.AddMilestoneTest()",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#6"
+    },
+    {
+      "name": "host",
+      "value": "LAPTOP-5N040E8C"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "NUnit 3"
+    },
+    {
+      "name": "package",
+      "value": "AQA_MTS_Graduate_Work.TestsUI"
+    },
+    {
+      "name": "testMethod",
+      "value": "AddMilestoneTest"
+    },
+    {
+      "name": "testClass",
+      "value": "MilestoneTest"
+    },
+    {
+      "name": "feature",
+      "value": "Positive UI Tests"
+    },
+    {
+      "name": "owner",
+      "value": "Qa A"
+    },
+    {
+      "name": "suite",
+      "value": "UI Tests"
+    }
+  ],
+  "links": [],
+  "name": "AddMilestoneTest",
+  "status": "passed",
+  "stage": "finished",
+  "description": "Проверка Добавления Milestone",
+  "steps": [
+    {
+      "name": "SuccessfulLogin",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "username",
+          "value": "\"rimanas_alina@mail.ru\"",
+          "excluded": false
+        },
+        {
+          "name": "password",
+          "value": "\"Qwerty11@\"",
+          "excluded": false
+        }
+      ],
+      "start": 1714426898882,
+      "stop": 1714426900584
+    },
+    {
+      "name": "AddMilestoneBuilder",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "_milestone",
+          "value": "{\"ID\":null,\"MilestoneName\":\"BuilderMilestone\",\"Description\":\"Builder\"}",
+          "excluded": false
+        }
+      ],
+      "start": 1714426900586,
+      "stop": 1714426904143
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1714426890152,
+  "stop": 1714426904384
+}
